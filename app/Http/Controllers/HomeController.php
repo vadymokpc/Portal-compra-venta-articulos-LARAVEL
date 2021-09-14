@@ -6,6 +6,7 @@ use App\Models\Ad;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
 
+
 class HomeController extends Controller
 {
 /*--------------------------------------------------------------------------------------------------------------*/
@@ -13,6 +14,8 @@ class HomeController extends Controller
 public function __construct()
 {
     $this->middleware('auth');    /* sólo los usuarios registrados pueden añadir un nuevo anuncio. */ 
+
+    
 }
 /*--------------------------------------------------------------------------------------------------------------*/
  public function index()
@@ -32,6 +35,7 @@ public function createAd(AdRequest $request)
     $a = new Ad();
     $a->title = $request->input('title');
     $a->body = $request->input('body');
+    $a->category_id = $request->input('category'); 
     $a->save();
     return redirect()->route('home')->with('ad.create.success','Anuncio creado con exito');
     }

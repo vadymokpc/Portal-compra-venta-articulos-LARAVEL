@@ -17,6 +17,19 @@
                                 {{ $message }}
                             </small>
                             @enderror
+<!-- ----------------------------------------------Desplegabe de categorias------------------------------------------------ -->
+                            <div class="form-group text-bold me-5  ms-5">
+                                <label for="form-label" class="my-2">Categorias</label>
+                                <select class="form-control" id="categories" name="category">
+                                    @foreach($categories ?? '' as $category)
+                                    <option value="{{$category->id}}"
+                                        {{old('category') == $category->id ? 'selected' : ''}}>{{$category->name}}
+                                    </option>
+                                    @endforeach
+                                </select>
+                            </div>
+ <!-- ----------------------------------------------Desplegabe de categorias------------------------------------------------ -->
+
                         </div>
                         <div class="form-group">
                             <label for="adBody">Anuncio</label>
