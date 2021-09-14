@@ -60,14 +60,14 @@ class FortifyServiceProvider extends ServiceProvider {
 
 
         Fortify::requestPasswordResetLinkView(function () {
-                return view('auth.forgot-password');              /* condicionado por -auth- de la funcion construct */
+                return view('auth.forgot-password');              /* (Aun no estamos usandola) condicionado por -auth- de la funcion construct */
             }
 
         );
 
 
         Fortify::resetPasswordView(function ($request) {
-                return view('auth.reset-password', ['request'=> $request]);   /* condicionado por -auth- de la funcion construct */
+                return view('auth.reset-password', ['request'=> $request]);   /* (Aun no estamos usandola) condicionado por -auth- de la funcion construct */
             }
          );
     }
