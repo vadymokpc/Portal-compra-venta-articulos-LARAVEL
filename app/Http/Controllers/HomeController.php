@@ -29,13 +29,14 @@ public function newAd()
     }
 
 /*--------------------------------------Ruta creacion anuncio nuevo--------------------------------*/
-public function createAd(AdRequest $request)
+public function createAd(AdRequest $request) 
 
     {
     $a = new Ad();
     $a->title = $request->input('title');
     $a->body = $request->input('body');
     $a->category_id = $request->input('category'); 
+    $a->price = $request->input('price');        /* Precio */  
     $a->save();
     return redirect()->route('home')->with('ad.create.success','Anuncio creado con exito');
     }

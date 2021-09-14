@@ -17,7 +17,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item py-2">
                         <a class="nav-link text-lowercase text-decoration-none text-reset" href="{{ route('ad.new') }}">
-                            Nuevo Anuncio
+                        <span>Nuevo Anuncio</span>
                         </a>
                     </li>
 <!----------------------------------------------------------------------------------------------------------->          

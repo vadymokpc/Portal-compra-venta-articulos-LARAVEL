@@ -13,7 +13,7 @@ class AdRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return true;             /* AUTORIZA LA SOLICITUD DEL FORMULARIO */
     }
 
     /**
@@ -26,7 +26,8 @@ class AdRequest extends FormRequest
         return [
 /* ----------------------------------Campos obligatorios para crear nuevo anuncio----------------------------------------- */
         'title'=>'required|string|max:120',
-        'body'=>'required|string|max:500'
+        'body'=>'required|string|max:500',
+        'price'=>'required|numeric|max:9999999999999.99', //Precio maximo 
         ];
     }
 /* ----------------------------------Campos obligatorios para crear nuevo anuncio----------------------------------------- */

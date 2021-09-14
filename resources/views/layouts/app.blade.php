@@ -23,15 +23,15 @@
 <script src="{{mix('js/app.js')}}"></script>
 
 <script>
-/*     ----------------------------------Script para boton de logout------------------------------
- */        const logout = document.getElementById('logoutBtn');
+/*-----------------------------------------Script para boton de logout------------------------------*/        
+const logout = document.getElementById('logoutBtn');
         if (logout) {
             logout.addEventListener('click', (e) => {
                 e.preventDefault();
                 const form = document.getElementById('logoutForm').submit();
             });
         }
-        /*     ----------------------------------Script para boton de logout------------------------------*/ 
+/* ----------------------------------------Script para boton de logout------------------------------*/ 
     </script>
     
 </body>

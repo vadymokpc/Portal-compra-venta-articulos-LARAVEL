@@ -8,6 +8,7 @@
                     Nuevo Anuncio
                     <form method="POST" action='{{route("ad.create")}}'>
                         @csrf
+                        <!-- ----------------------------------------------Titulo------------------------------------------------ -->
                         <div class="form-group">
                             <label for="adName">Titulo</label>
                             <input type="text" class="form-control" id="adName" name="title" value="{{old('title')}}">
@@ -17,7 +18,19 @@
                                 {{ $message }}
                             </small>
                             @enderror
-<!-- ----------------------------------------------Desplegabe de categorias------------------------------------------------ -->
+                             <!-- ----------------------------------------------Titulo------------------------------------------------ -->
+                            <!-- ----------------------------------------------Precio------------------------------------------------ -->
+                            <div class="form-group">
+                                <label for="adPrice">Precio</label>
+                                <input type="number" step="0.01" class="form-control" id="adPrice"
+                                    aria-describedby="priceHelp" name="price" value="{{old("price")}}">
+                                @error('price')
+                                <small id="priceHelp" class="form-text" style="color:red;">{{ $message }}</small>
+                                @enderror
+                            </div>
+                            <!-- ----------------------------------------------Precio------------------------------------------------ -->
+
+                            <!-- ----------------------------------------------Desplegabe de categorias------------------------------------------------ -->
                             <div class="form-group text-bold me-5  ms-5">
                                 <label for="form-label" class="my-2">Categorias</label>
                                 <select class="form-control" id="categories" name="category">
@@ -28,9 +41,10 @@
                                     @endforeach
                                 </select>
                             </div>
- <!-- ----------------------------------------------Desplegabe de categorias------------------------------------------------ -->
+                            <!-- ----------------------------------------------Desplegabe de categorias------------------------------------------------ -->
 
                         </div>
+                        <!-- ----------------------------------------------Anuncio text area------------------------------------------------ -->
                         <div class="form-group">
                             <label for="adBody">Anuncio</label>
                             <textarea class="form-control" name="body" id="adBody" cols="30"
@@ -42,6 +56,7 @@
                             </small>
                             @enderror
                         </div>
+                        <!-- ----------------------------------------------Anuncio text area------------------------------------------------ -->
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
