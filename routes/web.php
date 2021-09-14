@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class,'index'])->name('home'); 
+Route::get('/ad/new', [HomeController::class,'newAd'])->name('ad.new');//Ruta oara insertar nuevo anuncio
+Route::post('/ad/create', [HomeController::class,'createAd'])->name('ad.create');//Ruta creacion anuncio nuevo
