@@ -33,7 +33,7 @@ public function createAd(AdRequest $request)
     $a->title = $request->input('title');
     $a->body = $request->input('body');
     $a->save();
-    return redirect()->route('home');
+    return redirect()->route('home')->with('ad.create.success','Anuncio creado con exito');
     }
 
 /*--------------------------------------Ruta creacion anuncio nuevo--------------------------------*/
