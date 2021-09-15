@@ -20,3 +20,5 @@ Route::get('/', [PublicController::class,'index'])->name('home');
 Route::get('/ad/new', [HomeController::class,'newAd'])->name('ad.new');//Ruta para insertar nuevo anuncio
 Route::post('/ad/create', [HomeController::class,'createAd'])->name('ad.create');//Ruta guardado anuncio nuevo en DataBase
 //--------------------------------------Nuevo anuncio----------------------------------------------------------------------
+Route::get('/category/{name}/{id}/ads', [PublicController::class,'adsByCategory'])->name('category.ads');// Visualizar anuncios agrupados por categorias
+Route::get('/ad/{id}', [HomeController::class,'details'])->name("ad.details");// Pagina detalle de cada anuncio

@@ -1,20 +1,19 @@
-<?php
+<?php namespace App\Providers;
 
-namespace App\Providers;
-
-use App\Models\Category;                 /* Desplegabe de categorias */
-use Illuminate\Support\Facades\View;    /* View::share('categories', $categories); Desplegabe de categorias  */
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
+use App\Models\Category;
+use Illuminate\Support\Facades\View;
 
-class AppServiceProvider extends ServiceProvider
-{
+
+class AppServiceProvider extends ServiceProvider {
+
     /**
      * Register any application services.
      *
      * @return void
      */
-    public function register()
-    {
+    public function register() {
         //
     }
 
@@ -23,9 +22,24 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
-        $categories = Category::all();          /* Desplegabe de categorias */
-        View::share('categories', $categories); /* Desplegabe de categorias */ 
+    public function boot() {
+/* ---------------------------------------------------Desplegabe de categorias en formulario "crear anuncio" ------------------------------------------------------------------- */
+
+        try {
+            $categories=Category::all(); 
+            
+            View::share('categories', $categories);   
+         
+
+        }
+/* ----------------------------------------------------Desplegabe de categorias en formulario "crear anuncio" ------------------------------------------------------------------ */
+/* -----------------------------------------------Visualizar anuncios agrupados por categorias----------------------------------------------------------------------- */
+        catch (\Throwable $th) {
+            dump("ALERT: Recuerda lanzar las migrations cuando acabes el clone");
+        }
+
+        Paginator::useBootstrap();
+/* ------------------------------------------------Visualizar anuncios agrupados por categorias---------------------------------------------------------------------- */
+
     }
 }

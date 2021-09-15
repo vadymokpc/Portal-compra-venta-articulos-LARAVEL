@@ -20,13 +20,12 @@ public function __construct()
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 
-
 public function newAd() 
     {
-        return view('ad.new'); //Ruta oara insertar nuevo anuncio
+        return view('ad.new'); //Ruta para insertar nuevo anuncio
     }
 
-/*--------------------------------------Ruta creacion anuncio nuevo--------------------------------*/
+/*--------------------------------------Ruta creacion anuncio nuevo---------------------------------------------*/
 public function createAd(AdRequest $request) 
 
     {
@@ -35,10 +34,17 @@ public function createAd(AdRequest $request)
     $a->body = $request->input('body');
     $a->category_id = $request->input('category'); 
     $a->price = $request->input('price');        /* Precio */  
-    $a->user_id = Auth::id();                    /* ???? */  
+    $a->user_id = Auth::id();                    /* Visualizar el nombre del user creador del anuncio  */  
     $a->save();
     return redirect()->route('home')->with('ad.create.success','Anuncio creado con exito');
     }
-
-/*--------------------------------------Ruta creacion anuncio nuevo--------------------------------*/
+/*--------------------------------------Ruta creacion anuncio nuevo---------------------------------------------*/
+/*--------------------------------------Pagina detalle de cada anuncio-----------------------------------------------------*/
+public function details($id) 
+    {
+        $ad = Ad::findOrFail($id);
+        return view("ad.details",["ad"=>$ad]);
+    }
+/*--------------------------------------Pagina detalle de cada anuncio-----------------------------------------------------*/
+    
 }
