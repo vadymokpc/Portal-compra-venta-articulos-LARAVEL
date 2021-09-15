@@ -27,7 +27,7 @@ class AdRequest extends FormRequest
 /* ----------------------------------Campos obligatorios para crear nuevo anuncio----------------------------------------- */
         'title'=>'required|string|max:120',
         'body'=>'required|string|max:500',
-        'price'=>'required|numeric|max:9999999999999.99', //Precio maximo 
+        'price'=>'required|numeric|min:0,00|max:9999999999999.99', //Precio maximo 
         ];
     }
 /* ----------------------------------Campos obligatorios para crear nuevo anuncio----------------------------------------- */
