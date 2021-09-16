@@ -27,7 +27,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Categorias
                         </a>
-                        
+
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @foreach ($categories as $category)
                             <li><a class="dropdown-item"
@@ -62,6 +62,19 @@
                             class=" nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-reset"
                             href="#">Logout</a>
                     </li>
+<!------------------------------------------------------------para que nos aparezca un numero con cuantos anuncios por revisar----------------------------------------------->
+                    @auth
+                    @if (Auth::user()->is_revisor)
+                    <li class="nav-item py-2">
+                        <a class="nav-link" href="{{ route('revisor.home') }}">
+                            Por revisar
+                            <span class="badge rounded-pill bg-danger">
+                                {{\App\Models\Ad::ToBeRevisionedCount() }}
+                            </span>
+                        </a>
+                    </li>
+                    @endif
+                    @endauth
                     @endguest
                 </ul>
         </div>

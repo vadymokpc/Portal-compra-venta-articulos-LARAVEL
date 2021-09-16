@@ -24,5 +24,11 @@ public function adsByCategory($name, $category_id){
     return view('ads', compact ('category', 'ads'));
 }
 /*  -- --------------------------------Visualizar anuncios agrupados por categorias------------------------------ -- */ 
-
+/*--------------------------------------Pagina detalle de cada anuncio-----------------------------------------------------*/
+public function details($id) 
+    {
+        $ad = Ad::findOrFail($id);
+        return view("ad.details",["ad"=>$ad]);
+    }
+/*--------------------------------------Pagina detalle de cada anuncio-----------------------------------------------------*/
 }

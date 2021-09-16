@@ -14,7 +14,7 @@ class HomeController extends Controller
 
 public function __construct()
 {
-    $this->middleware('auth');    /* sólo los usuarios registrados pueden añadir un nuevo anuncio. */ 
+    $this->middleware('auth');    /* sólo los usuarios registrados tienen acceso a todas las funciones. */ 
 
     
 }
@@ -39,12 +39,6 @@ public function createAd(AdRequest $request)
     return redirect()->route('home')->with('ad.create.success','Anuncio creado con exito');
     }
 /*--------------------------------------Ruta creacion anuncio nuevo---------------------------------------------*/
-/*--------------------------------------Pagina detalle de cada anuncio-----------------------------------------------------*/
-public function details($id) 
-    {
-        $ad = Ad::findOrFail($id);
-        return view("ad.details",["ad"=>$ad]);
-    }
-/*--------------------------------------Pagina detalle de cada anuncio-----------------------------------------------------*/
+
     
 }
