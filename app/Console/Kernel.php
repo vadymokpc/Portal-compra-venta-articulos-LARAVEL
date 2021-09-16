@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\MakeUserRevisor;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -12,10 +13,12 @@ class Kernel extends ConsoleKernel
      *
      * @var array
      */
+/*  ------------------------------------------------------Registrar comando para convertir en revisor cualquier usuario---------------------------------------------------------------------- */ 
     protected $commands = [
-        //
-    ];
 
+        MakeUserRevisor::class
+    ];
+/*  ------------------------------------------------------Registrar comando para convertir en revisor cualquier usuario---------------------------------------------------------------------- */
     /**
      * Define the application's command schedule.
      *
