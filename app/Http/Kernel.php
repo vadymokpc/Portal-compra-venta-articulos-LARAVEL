@@ -57,6 +57,9 @@ class Kernel extends HttpKernel
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
+    /* --------------------------Protegemos con Middleware el controlador del revisor------------------------------------------------------------------------------ */
+        'auth.revisor' => \App\Http\Middleware\RevisorMiddleware::class,
+    /* --------------------------Protegemos con Middleware el controlador del revisor------------------------------------------------------------------------------ */
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class,

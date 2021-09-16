@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,4 @@ Route::post('/ad/create', [HomeController::class,'createAd'])->name('ad.create')
 //--------------------------------------Nuevo anuncio----------------------------------------------------------------------
 Route::get('/category/{name}/{id}/ads', [PublicController::class,'adsByCategory'])->name('category.ads');// Visualizar anuncios agrupados por categorias
 Route::get('/ad/{id}', [HomeController::class,'details'])->name("ad.details");// Pagina detalle de cada anuncio
+Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home');// Ruta para el revisor

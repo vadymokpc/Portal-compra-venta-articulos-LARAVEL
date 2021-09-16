@@ -24,8 +24,8 @@ class AppServiceProvider extends ServiceProvider {
      */
     public function boot() {
 /* ---------------------------------------------------Excepcion para evitar error al clonar "user 3.1"------------------------------------------------------------------- */
-        if(Schema::hasTable('categories'))  
-        View::share('categories', Category::all());
+        /* if(Schema::hasTable('categories'))  
+        View::share('categories', Category::all()); */
 /* ---------------------------------------------------Excepcion para evitar error al clonar "user 3.1"------------------------------------------------------------------- */        
 /* ---------------------------------------------------Desplegabe de categorias en formulario "crear anuncio" ------------------------------------------------------------------- */
 

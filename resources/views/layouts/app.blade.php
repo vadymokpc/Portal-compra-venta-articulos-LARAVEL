@@ -23,6 +23,11 @@
         <div class="alert alert-success">{{session('ad.create.success')}}</div>
         @endif
         <!-- --------------------------------Alert "Anuncio creado con exito"------------------------------ -->
+        <!-- --------------------------------Alert Revisor en caso de acceso denegado------------------------------ -->
+        @if(session('access.denied.revisor.only'))
+        <div class="alert alert-danger">{{session('access.denied.revisor.only')}}</div>
+        @endif
+        <!-- --------------------------------Alert Revisor en caso de acceso denegado------------------------------ -->
         <main class="container py-4">
             @yield('content')
         </main>
