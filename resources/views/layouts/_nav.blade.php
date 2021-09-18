@@ -1,6 +1,6 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg text-uppercase py-0 border-bottom" id="mainNav">
-    <div class="container">
+    <div class="container-fluid">
         <a class="navbar-brand js-scroll-trigger text-decoration-none text-reset prontologo"
             href="{{ route('home') }}">Pronto.es</a>
         <button
@@ -11,8 +11,6 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <!----------------------------------------------------------------------------------------------------------->
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item py-2">

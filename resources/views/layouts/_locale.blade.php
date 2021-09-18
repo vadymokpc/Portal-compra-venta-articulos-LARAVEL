@@ -1,5 +1,5 @@
 
-<div class="nav">
+<div class="nav d-flex justify-content-end">
 <li class="nav-item py-2 ">
     <form action="{{route('locale',['locale'=>$lang])}}" method="POST">
         @csrf
