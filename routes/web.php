@@ -28,3 +28,4 @@ Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home')
 Route::post('/revisor/ad/{id}/accept',[RevisorController::class,'accept'])->name('revisor.ad.accept');
 Route::post('/revisor/ad/{id}/reject',[RevisorController::class,'reject'])->name('revisor.ad.reject');
 //--------------------------------------Revisor aceptar o rechazar anuncio----------------------------------------------------------------------
+Route::post('/locale/{locale}', [PublicController::class,'locale'])->name('locale');// Ruta banderitas de idiomas
