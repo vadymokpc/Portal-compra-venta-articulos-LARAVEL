@@ -13,6 +13,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
+                    
                     <li class="nav-item py-2">
                         <a class="nav-link text-lowercase text-decoration-none text-reset" href="{{ route('ad.new') }}">
                             <span>Nuevo Anuncio</span>
