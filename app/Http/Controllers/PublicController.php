@@ -5,6 +5,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller {
+    
     public function index() {
         /*--------------------------------------Flitrado de anuncios aceptados por revisor-----------------------------------------------------*/
         $ads = Ad::where('is_accepted',true)
@@ -29,9 +30,13 @@ class PublicController extends Controller {
         $ad=Ad::findOrFail($id);
         return view("ad.details", ["ad"=>$ad]);
     }
-
     /*--------------------------------------Pagina detalle de cada anuncio-----------------------------------------------------*/
 
-
+    /*-------------------------------------------------------------------------------------------*/
+    public function locale($locale)
+    {
+        session()->put('locale', $locale);
+        return redirect()->back();
+    }
 
 }

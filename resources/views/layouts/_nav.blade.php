@@ -41,6 +41,7 @@
                     </li>
                     <!---------------------------------------------------Drop down CATEGORIAS-------------------------------------------------------->
                     @guest
+
                     @if (Route::has('login'))
                     <li class="nav-item mx-0 mx-lg-1 ">
                         <a class="borderMarcador nav-link text-lowercase py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-reset"
@@ -64,6 +65,7 @@
                     </li>
 <!------------------------------------------------------------para que nos aparezca un numero con cuantos anuncios por revisar----------------------------------------------->
                     @auth
+                    
                     @if (Auth::user()->is_revisor)
                     <li class="nav-item py-2">
                         <a class="nav-link" href="{{ route('revisor.home') }}">
@@ -74,7 +76,14 @@
                         </a>
                     </li>
                     @endif
+
                     @endauth
+<!------------------------------------------------------------para que nos aparezca un numero con cuantos anuncios por revisar----------------------------------------------->
+<!------------------------------------------------------------Banderitas de idiomas desde _locale.blade---------------------------------------------------------------------------------->
+@include('layouts._locale',["lang"=>'es','nation'=>'es']) 
+@include('layouts._locale',["lang"=>'gb','nation'=>'gb'])  
+@include('layouts._locale',["lang"=>'it','nation'=>'it'])                           
+<!------------------------------------------------------------Banderitas de idiomas desde _locale.blade---------------------------------------------------------------------------------->            
                     @endguest
                 </ul>
         </div>
