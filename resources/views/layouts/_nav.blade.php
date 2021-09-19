@@ -72,7 +72,6 @@
 
                     @endauth
                     <div class="lang-flags">
-                        <!------------------------------------------------------------para que nos aparezca un numero con cuantos anuncios por revisar----------------------------------------------->
                         <!------------------------------------------------------------Banderitas de idiomas desde _locale.blade---------------------------------------------------------------------------------->
                         @include('layouts._locale',["lang"=>'es','nation'=>'es'])
                         @include('layouts._locale',["lang"=>'gb','nation'=>'gb'])
