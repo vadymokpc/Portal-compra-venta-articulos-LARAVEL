@@ -1,72 +1,65 @@
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg text-uppercase py-0 border-bottom" id="mainNav">
-    <div class="container-fluid">
-        <a class="navbar-brand js-scroll-trigger text-decoration-none text-reset prontologo"
-            href="{{ route('home') }}">Pronto.es</a>
-        <button
-            class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
-            type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-            aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{{ route('home') }}">Pronto.es</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-                <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav mr-auto">
-                    
-                    <li class="nav-item py-2">
-                        <a class="nav-link text-lowercase text-decoration-none text-reset" href="{{ route('ad.new') }}">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav d-flex align-items-center justify-content-between w-100">
+
+                <div class="left-nav-elements d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none text-reset" href="{{ route('ad.new') }}">
                             <span>Nuevo Anuncio</span>
                         </a>
                     </li>
-                    <!----------------------------------------------------------------------------------------------------------->
-                    <!--------------------------------------------------Drop down CATEGORIAS--------------------------------------------------------->
-                    <li class="nav-item py-2 dropdown">
+                    <li class="nav-item dropdown">
+
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Categorias
                         </a>
-
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @foreach ($categories as $category)
                             <li><a class="dropdown-item"
                                     href="{{route('category.ads',['name'=>$category->name,'id'=>$category->id])}}">{{$category->name}}</a>
                             </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+
                             @endforeach
                         </ul>
                     </li>
-                    <!---------------------------------------------------Drop down CATEGORIAS-------------------------------------------------------->
+                </div>
+
+                <div class="right-nav-elements d-flex align-items-center">
+
                     @guest
 
                     @if (Route::has('login'))
-                    <li class="nav-item mx-0 mx-lg-1 ">
+                    <li class="nav-item dropdown">
                         <a class="borderMarcador nav-link text-lowercase py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-reset"
                             href="{{route('login')}}"><span>Login</span></a>
                     </li>
                     @endif
                     @if (Route::has('register'))
-                    <li class="nav-item mx-0 mx-lg-1">
+                    <li class="nav-item dropdown">
                         <a class="borderMarcador nav-link text-lowercase py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-reset"
                             href="{{route('register')}}"><span>Register</span></a>
                     </li>
                     @endif
                     @else
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <form id="logoutForm" action="{{route('logout')}}" method="POST">
-                            @csrf
-                        </form>
+                    <form id="logoutForm" action="{{route('logout')}}" method="POST">
+                        @csrf
+                    </form>
+                    <li class="nav-item dropdown">
                         <a id="logoutBtn"
                             class=" nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-reset"
                             href="#">Logout</a>
                     </li>
-<!------------------------------------------------------------para que nos aparezca un numero con cuantos anuncios por revisar----------------------------------------------->
                     @auth
-                    
+
                     @if (Auth::user()->is_revisor)
-                    <li class="nav-item py-2">
+                    <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ route('revisor.home') }}">
                             Por revisar
                             <span class="badge rounded-pill bg-danger">
@@ -74,17 +67,47 @@
                             </span>
                         </a>
                     </li>
+
                     @endif
 
                     @endauth
-<!------------------------------------------------------------para que nos aparezca un numero con cuantos anuncios por revisar----------------------------------------------->
-<!------------------------------------------------------------Banderitas de idiomas desde _locale.blade---------------------------------------------------------------------------------->
-@include('layouts._locale',["lang"=>'es','nation'=>'es']) 
-@include('layouts._locale',["lang"=>'gb','nation'=>'gb'])  
-@include('layouts._locale',["lang"=>'it','nation'=>'it'])                           
-<!------------------------------------------------------------Banderitas de idiomas desde _locale.blade---------------------------------------------------------------------------------->            
-                    @endguest
-                </ul>
+                    <div class="lang-flags">
+                        <!------------------------------------------------------------para que nos aparezca un numero con cuantos anuncios por revisar----------------------------------------------->
+                        <!------------------------------------------------------------Banderitas de idiomas desde _locale.blade---------------------------------------------------------------------------------->
+                        @include('layouts._locale',["lang"=>'es','nation'=>'es'])
+                        @include('layouts._locale',["lang"=>'gb','nation'=>'gb'])
+                        @include('layouts._locale',["lang"=>'it','nation'=>'it'])
+                        <!------------------------------------------------------------Banderitas de idiomas desde _locale.blade---------------------------------------------------------------------------------->
+                        @endguest
+
+                    </div>
+
+                </div>
+
+
+            </ul>
         </div>
     </div>
 </nav>
+
+<style>
+.lang-flags {
+    display: flex;
+}
+
+@media (max-width: 991px) {
+
+    .navbar-nav .left-nav-elements,
+    .right-nav-elements {
+        flex-direction: column;
+    }
+
+    .lang-flags {
+        display: flex;
+    }
+
+    .lang-flags>form:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+</style>

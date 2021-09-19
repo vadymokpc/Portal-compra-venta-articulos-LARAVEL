@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 @section('content')
 <!-- ======= FORM LOGIN ======= -->
@@ -52,9 +51,7 @@
         </div>
     </div>
 </div>
-<div class="col-12 col-md-4 mt-5 pt-5">
-    <p class="text-medium ">LOGIN</p>
-</div>
+
 </div>
 </div>
 @endsection

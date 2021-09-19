@@ -27,7 +27,7 @@ class PublicController extends Controller {
     /*  -- --------------------------------????????????Visualizar anuncios agrupados por categorias------------------------------ -- */
     /*--------------------------------------Pagina detalle de cada anuncio-----------------------------------------------------*/
     public function details($id) {
-        $ad=Ad::findOrFail($id);
+        $ad = Ad::findOrFail($id);
         return view("ad.details", ["ad"=>$ad]);
     }
     /*--------------------------------------Pagina detalle de cada anuncio-----------------------------------------------------*/
