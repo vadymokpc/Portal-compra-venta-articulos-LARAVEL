@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
     <div class="container">
-        <a class="navbar-brand borderLeftRight" href="{{ route('home') }}">Pronto.es</a>
+        <a class="navbar-brand fs-5 text-decoration-none text-reset borderLeftRight" href="{{ route('home') }}">Pronto.es</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -11,13 +11,13 @@
 
                 <div class="left-nav-elements d-flex">
                     <li class="nav-item">
-                        <a class="nav-link text-decoration-none text-reset borderLeftRight" href="{{ route('ad.new') }}">
+                        <a class="nav-link fs-5 text-decoration-none text-reset borderLeftRight" href="{{ route('ad.new') }}">
                             <span>Nuevo Anuncio</span>
                         </a>
                     </li>
                     <li class="nav-item dropdown borderLeftRight">
 
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link fs-5 text-decoration-none text-reset dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Categorias
                         </a>
@@ -93,7 +93,7 @@
 
 <style>
     :root{
-        --color3: #F28C0F;
+        --color3: #7BF51B;
     }
 .lang-flags {
     display: flex;
