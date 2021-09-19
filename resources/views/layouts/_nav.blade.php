@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
     <div class="container">
-        <a class="navbar-brand borderLeftRight" href="{{ route('home') }}">Pronto.es</a>
+        <a class="navbar-brand borderLeftRight" href="{{ route('home') }}">Rapido.es</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -11,7 +11,8 @@
 
                 <div class="left-nav-elements d-flex">
                     <li class="nav-item">
-                        <a class="nav-link text-decoration-none text-reset borderLeftRight" href="{{ route('ad.new') }}">
+                        <a class="nav-link text-decoration-none text-reset borderLeftRight"
+                            href="{{ route('ad.new') }}">
                             <span>Nuevo Anuncio</span>
                         </a>
                     </li>
@@ -19,7 +20,7 @@
 
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorias
+                            <span>Categorias</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @foreach ($categories as $category)
@@ -91,9 +92,13 @@
 </nav>
 
 <style>
-    :root{
-        --color3: #F28C0F;
-    }
+/* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
+:root {
+    --color3: #7BF51B;
+}
+
+/* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
+/* ---------------------------------------------Mobile responsive ----------------------------   */
 .lang-flags {
     display: flex;
 }
@@ -112,6 +117,10 @@
     .lang-flags>form:not(:last-child) {
         margin-right: 15px;
     }
+
+    /* ---------------------------------------------Mobile responsive ----------------------------   */
+
+    /* ---------------------------------------------Animaciones de botones ----------------------------   */
 }
 
 .borderLeftRight {
@@ -135,5 +144,14 @@
 .borderLeftRight:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+/* ---------------------------------------------Animaciones de botones ----------------------------   */
+
+body {
+    /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
+    font-family: 'Kanit', sans-serif;
+    /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
+
 }
 </style>
