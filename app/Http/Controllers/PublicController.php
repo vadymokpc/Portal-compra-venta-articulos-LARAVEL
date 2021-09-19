@@ -31,7 +31,7 @@ class PublicController extends Controller {
         return view("ad.details", ["ad"=>$ad]);
     }
     /*--------------------------------------Pagina detalle de cada anuncio-----------------------------------------------------*/
-
+ 
     /*-------------------------------------------------------------------------------------------*/
     public function locale($locale)
     {
