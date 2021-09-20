@@ -12,6 +12,12 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <!-- Styles -->
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
+    <!-- Google fonts "Extra-light 200"  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    <!-- Google fonts "Extra-light 200"  -->
+
 </head>
 
 <body>
@@ -37,16 +43,15 @@
     <script src="{{mix('js/app.js')}}"></script>
 
     <script>
-        /*-----------------------------------------Script para boton de logout------------------------------*/
-        const logout = document.getElementById('logoutBtn');
-        if (logout) {
-            logout.addEventListener('click', (e) => {
-                e.preventDefault();
-                const form = document.getElementById('logoutForm').submit();
-            });
-        }
-        /* ----------------------------------------Script para boton de logout------------------------------*/
-
+    /*-----------------------------------------Script para boton de logout------------------------------*/
+    const logout = document.getElementById('logoutBtn');
+    if (logout) {
+        logout.addEventListener('click', (e) => {
+            e.preventDefault();
+            const form = document.getElementById('logoutForm').submit();
+        });
+    }
+    /* ----------------------------------------Script para boton de logout------------------------------*/
     </script>
 
 </body>
