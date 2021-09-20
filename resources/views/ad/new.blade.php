@@ -18,7 +18,7 @@
                                 {{ $message }}
                             </small>
                             @enderror
-                             <!-- ----------------------------------------------Titulo------------------------------------------------ -->
+                            <!-- ----------------------------------------------Titulo------------------------------------------------ -->
                             <!-- ----------------------------------------------Precio------------------------------------------------ -->
                             <div class="form-group">
                                 <label for="adPrice">Precio</label>
@@ -31,7 +31,7 @@
                             <!-- ----------------------------------------------Precio------------------------------------------------ -->
 
                             <!-- ----------------------------------------------Desplegabe de categorias------------------------------------------------ -->
-                            <div class="form-group text-bold me-5  ms-5">
+                            <div class="form-group">
                                 <label for="form-label" class="my-2">Categorias</label>
                                 <select class="form-control" id="categories" name="category">
                                     @foreach($categories ?? '' as $category)

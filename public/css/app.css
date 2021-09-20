@@ -11324,17 +11324,7 @@ body {
   /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
   font-family: "Kanit", sans-serif;
   /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
-  background-image: url("/imagenesRapido.es/portada.jpg");
-  background-repeat: no-repeat;
-}
-
-.navbar {
-  background-color: #292920;
-}
-
-.bg-white {
-  --bs-bg-opacity: 90;
-  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity));
+  background-color: #109ec2;
 }
 
 .flag-icon-background, .flag-icon {
