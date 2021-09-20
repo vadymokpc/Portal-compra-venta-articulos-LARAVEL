@@ -37,6 +37,7 @@
                     @guest
 
                     @if (Route::has('login'))
+                    
                     <li class="nav-item dropdown">
                         <a class="borderMarcador nav-link text-lowercase py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-reset"
                             href="{{route('login')}}"><span>Login</span></a>
