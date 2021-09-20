@@ -1,7 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light ">
 
     <div class="container">
-        <a class="navbar-brand borderLeftRight" href="{{ route('home') }}">Rapido.es</a>
+
+        <a class="navbar-brand fs-5 text-decoration-none text-white borderLeftRight"
+            href="{{ route('home') }}">Rapido.es</a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -11,15 +14,16 @@
 
                 <div class="left-nav-elements d-flex">
                     <li class="nav-item">
-                        <a class="nav-link text-decoration-none text-reset borderLeftRight"
+
+                        <a class="nav-link fs-5 text-decoration-none text-white borderLeftRight nuevoAnuncio"
                             href="{{ route('ad.new') }}">
                             <span>Nuevo Anuncio</span>
                         </a>
                     </li>
                     <li class="nav-item dropdown borderLeftRight">
 
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link fs-5 text-decoration-none text-white dropdown-toggle" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span>Categorias</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -37,40 +41,44 @@
 
                     @guest
 
-                    @if (Route::has('login'))
                     <li class="nav-item dropdown">
-                        <a class="borderMarcador nav-link text-lowercase py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-reset"
+                        <a class="borderMarcador nav-link text-lowercase py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-white"
                             href="{{route('login')}}"><span>Login</span></a>
                     </li>
-                    @endif
-                    @if (Route::has('register'))
+
                     <li class="nav-item dropdown">
-                        <a class="borderMarcador nav-link text-lowercase py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-reset"
+                        <a class="borderMarcador nav-link text-lowercase py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-white"
                             href="{{route('register')}}"><span>Register</span></a>
                     </li>
-                    @endif
-                    @else
+
+                    @endguest
+
+                    @auth
                     <form id="logoutForm" action="{{route('logout')}}" method="POST">
                         @csrf
                     </form>
                     <li class="nav-item dropdown">
                         <a id="logoutBtn"
-                            class=" nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-reset"
+                            class=" nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-white"
                             href="#">Logout</a>
                     </li>
-                    @auth
-
+                    <!-- ---------------------------------------nombre de usuario autentificado----------------------------------------------------------------- -->
+                    <li class="nav-item py-2 text-white">
+                        {{ Auth::user()->name }}
+                    </li>
+                    <!-- ---------------------------------------nombre de usuario autentificado----------------------------------------------------------------- -->
+                    <!-- ---------------------------------------Alert con el numero de anuncios por revisar----------------------------------------------------------------- -->
                     @if (Auth::user()->is_revisor)
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ route('revisor.home') }}">
+                        <a class="nav-link text-white" href="{{ route('revisor.home') }}">
                             Por revisar
                             <span class="badge rounded-pill bg-danger">
                                 {{\App\Models\Ad::ToBeRevisionedCount() }}
                             </span>
                         </a>
                     </li>
-
                     @endif
+                    <!-- ---------------------------------------Alert con el numero de anuncios por revisar----------------------------------------------------------------- -->
 
                     @endauth
                     <div class="lang-flags">
@@ -79,7 +87,7 @@
                         @include('layouts._locale',["lang"=>'gb','nation'=>'gb'])
                         @include('layouts._locale',["lang"=>'it','nation'=>'it'])
                         <!------------------------------------------------------------Banderitas de idiomas desde _locale.blade---------------------------------------------------------------------------------->
-                        @endguest
+
 
                     </div>
 
@@ -90,68 +98,3 @@
         </div>
     </div>
 </nav>
-
-<style>
-/* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
-:root {
-    --color3: #7BF51B;
-}
-
-/* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
-/* ---------------------------------------------Mobile responsive ----------------------------   */
-.lang-flags {
-    display: flex;
-}
-
-@media (max-width: 991px) {
-
-    .navbar-nav .left-nav-elements,
-    .right-nav-elements {
-        flex-direction: column;
-    }
-
-    .lang-flags {
-        display: flex;
-    }
-
-    .lang-flags>form:not(:last-child) {
-        margin-right: 15px;
-    }
-
-    /* ---------------------------------------------Mobile responsive ----------------------------   */
-
-    /* ---------------------------------------------Animaciones de botones ----------------------------   */
-}
-
-.borderLeftRight {
-    position: relative;
-}
-
-.borderLeftRight::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color3);
-    transform: scaleX(0);
-    transition: transform 0.4s ease-in-out;
-    transform-origin: bottom right;
-
-}
-
-.borderLeftRight:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-/* ---------------------------------------------Animaciones de botones ----------------------------   */
-
-body {
-    /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
-    font-family: 'Kanit', sans-serif;
-    /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
-
-}
-</style>

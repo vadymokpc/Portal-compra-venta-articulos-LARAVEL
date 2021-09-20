@@ -11269,6 +11269,68 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
+:root {
+  --color3: #7BF51B;
+}
+
+/* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
+/* ---------------------------------------------Mobile responsive ----------------------------   */
+.lang-flags {
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav .left-nav-elements,
+.right-nav-elements {
+    flex-direction: column;
+  }
+
+  .lang-flags {
+    display: flex;
+  }
+
+  .lang-flags > form:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  /* ---------------------------------------------Mobile responsive ----------------------------   */
+  /* ---------------------------------------------Animaciones de botones ----------------------------   */
+}
+.borderLeftRight {
+  position: relative;
+}
+
+.borderLeftRight::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color3);
+  transform: scaleX(0);
+  transition: transform 0.4s ease-in-out;
+  transform-origin: bottom right;
+}
+
+.borderLeftRight:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* ---------------------------------------------Animaciones de botones ----------------------------   */
+body {
+  /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
+  font-family: "Kanit", sans-serif;
+  /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
+  background-color: #F6F8F7;
+}
+
+.navbar {
+  background-color: #292920;
+}
+
 .flag-icon-background, .flag-icon {
   background-size: contain;
   background-position: 50%;
