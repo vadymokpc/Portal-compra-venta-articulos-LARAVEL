@@ -2,8 +2,8 @@
 @section('content')
 <!-- ======= FORM LOGIN ======= -->
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-md-8 d-flex flex-column align-items-center">
+    <div class="row" height="200px">
+        <div class="col-12 col-md-12 d-flex flex-column align-items-center">
             <div class="form-content">
                 <!--FORM TITLE -->
                 <div class="section-title">
@@ -42,8 +42,8 @@
                 </form>
             </div>
             <div class="div form-link d-flex mt-4 ms-5 ps-5 ">
-                <p class="text-white">¿You dont have an account? </p>
-                <a class="text-reset text-decoration-none ms-2" href="{{route('register')}}"><u> Register here</u></a>
+                <p class="text-white">¿No estás registrado? </p>
+                <a class="text-reset text-decoration-none ms-2" href="{{route('register')}}"><u> ¡Registrate aqui!</u></a>
             </div>
         </div>
         <div class="col-12 col-md-4">
