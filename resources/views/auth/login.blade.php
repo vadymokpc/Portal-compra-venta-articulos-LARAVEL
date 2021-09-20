@@ -35,10 +35,10 @@
                     <!--Button-Login-->
                     <div class="align-items-center my-2">
                         <button href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span class="botonLoginRegister"></span>
+                            <span class="botonLoginRegister"></span>
+                            <span class="botonLoginRegister"></span>
+                            <span class="botonLoginRegister"></span>
                             Log-in
                         </button>
                     </div>

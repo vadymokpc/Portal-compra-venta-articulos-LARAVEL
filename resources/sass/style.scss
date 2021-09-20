@@ -1,6 +1,6 @@
 /* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
 :root {
-    --color3: #7BF51B;
+    --color3: #FAFAFA;
 
 }
 
@@ -61,6 +61,7 @@ body {
     /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
     background-color: #158ba8;
 
+    /* ---------------------------------------------Botones Login/Register ----------------------------------------------------*/
     button {
         position: relative;
         display: inline-block;
@@ -87,13 +88,13 @@ body {
         transition-delay: 1s;
     }
 
-    button span {
+    button .botonLoginRegister {
         position: absolute;
         display: block;
     }
 
     /* ----------------------------------Transicion superior de izquierda a derecha------------------------------------- */
-    button span:nth-child(1) {
+    button .botonLoginRegister:nth-child(1) {
         top: 0;
         left: -100%;
         width: 100%;
@@ -101,14 +102,14 @@ body {
         background: linear-gradient(90deg, transparent, #2196f3);
     }
 
-    button:hover span:nth-child(1) {
+    button:hover .botonLoginRegister:nth-child(1) {
         left: 100%;
         transition: 1s;
     }
 
     /* ----------------------------------Transicion superior de izquierda a derecha------------------------------------- */
     /* ----------------------------------Transicion inferior de derecha a izquierda------------------------------------- */
-    button span:nth-child(3) {
+    button .botonLoginRegister:nth-child(3) {
         bottom: 0;
         right: -100%;
         width: 100%;
@@ -116,7 +117,7 @@ body {
         background: linear-gradient(270deg, transparent, #2196f3);
     }
 
-    button:hover span:nth-child(3) {
+    button:hover .botonLoginRegister:nth-child(3) {
         right: 100%;
         transition: 1s;
         transition-delay: 0.5s;
@@ -124,7 +125,7 @@ body {
 
     /* ----------------------------------Transicion inferior de derecha a izquierda------------------------------------- */
     /* ----------------------------------Transicion lateral derecho de arriba abajo------------------------------------- */
-    button span:nth-child(2) {
+    button .botonLoginRegister:nth-child(2) {
         top: -100%;
         right: 0;
         width: 2px;
@@ -132,14 +133,14 @@ body {
         background: linear-gradient(180deg, transparent, #2196f3);
     }
 
-    button:hover span:nth-child(2) {
+    button:hover .botonLoginRegister:nth-child(2) {
         top: 100%;
         transition: 1s;
         transition-delay: 0.25s;
     }
 
     /* ----------------------------------Transicion lateral izquierdo de abajo arriba------------------------------------- */
-    button span:nth-child(4) {
+    button .botonLoginRegister:nth-child(4) {
         bottom: -100%;
         left: 0;
         width: 2px;
@@ -147,11 +148,14 @@ body {
         background: linear-gradient(360deg, transparent, #2196f3);
     }
 
-    button:hover span:nth-child(4) {
+    button:hover .botonLoginRegister:nth-child(4) {
         bottom: 100%;
         transition: 1s;
         transition-delay: 0.75s;
     }
+
+    /* ---------------------------------------------Botones Login/Register ----------------------------------------------------*/
+
 }
 
 .altura {

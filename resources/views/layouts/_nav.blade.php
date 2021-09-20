@@ -87,8 +87,6 @@
                         @include('layouts._locale',["lang"=>'gb','nation'=>'gb'])
                         @include('layouts._locale',["lang"=>'it','nation'=>'it'])
                         <!------------------------------------------------------------Banderitas de idiomas desde _locale.blade---------------------------------------------------------------------------------->
-
-
                     </div>
 
                 </div>

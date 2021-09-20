@@ -1,65 +1,63 @@
 @extends('layouts.app')
 @section('content')
 <!-- ======= REGISTER ======= -->
-<div class="container-fluid bg-accent vh-100">
-    <div class="row mb-5 pb-5">
-        <div class="col-12 col-md-8 ms-5">
+<div class="container-fluid my-5 py-5 altura">
+    <div class="row">
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center">
             <div class="d-flex flex-column align-items-center ">
-                <div class="form-content justify-content-center mb-5 pb-5">
-                    <!--FORM TITLE -->
-                    <div class="section-title">
-                        <h2 class="form-title space-around">REGISTER
-                            <!-- <span> Rapido.es</span> -->
-                        </h2>
-                        <!-- <p>Ut possimus qui ut temporibus culpa velit autem.</p> -->
-                    </div>
-                    @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @endif
-                    <!--FORM FIELDS -->
-                    <form action="/register" method="POST" role="form" class="php-email-form">
-                        @csrf
-                        <!--Name -->
-                        <div class="form-field-edit form-field space-around my-2">
-                            <input type="text" name="name" id="name" class="form-control forms_field-input"
-                                placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                            <div class="validate"></div>
-                        </div>
-                        <!--Email -->
-                        <div class="form-field-edit form-field space-around my-2">
-                            <input type="email" name="email" id="email" class="form-control forms_field-input"
-                                placeholder="Your Email" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                            <div class="validate"></div>
-                        </div>
-                        <!--Password -->
-                        <div class="form-field-edit form-field space-around my-2">
-                            <input type="password" name="password" id="password" class="form-control forms_field-input"
-                                placeholder="Your Password">
-                            <div class="validate"></div>
-                        </div>
-                        <!--Password Confirmation -->
-                        <div class="form-field-edit form-field space-around my-2">
-                            <input type="password" name="password_confirmation" id="password"
-                                class="form-control forms_field-input" placeholder="Your Password">
-                            <div class="validate"></div>
-                        </div>
-                        <!--Button-Register-->
-                        <button type="submit" class=" form-button-edit text-center space-around my-2">
+                <!--FORM TITLE -->
+                <h2>REGISTRARSE</h2>
+
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+                <!--FORM FIELDS -->
+                <form action="/register" method="POST" role="form"
+                    class="d-flex flex-column justify-content-center align-items-center">
+                    @csrf
+                    <!--Name -->
+
+                    <input type="text" name="name" id="name" class="form-control forms_field-input" placeholder="Nombre"
+                        data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+
+                    <!--Email -->
+
+                    <input type="email" name="email" id="email" class="form-control forms_field-input mt-1"
+                        placeholder="Email" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+
+                    <!--Password -->
+
+                    <input type="password" name="password" id="password" class="form-control forms_field-input mt-1"
+                        placeholder="Contraseña">
+
+                    <!--Password Confirmation -->
+
+                    <input type="password" name="password_confirmation" id="password"
+                        class="form-control forms_field-input mt-1" placeholder="Contraseña">
+
+                    <!--Button-Register-->
+                    <div class="align-items-center my-2">
+                        <button href="#">
+                            <span class="botonLoginRegister"></span>
+                            <span class="botonLoginRegister"></span>
+                            <span class="botonLoginRegister"></span>
+                            <span class="botonLoginRegister"></span>
                             Register
                         </button>
-                    </form>
-                </div>
-                <div class="form-link mt-4 d-flex">
-                    <p class="text-white">You dont have an account</p>
-                    <a class="text-reset text-decoration-none ps-2" href="{{route('login')}}"><u>Login here</u></a>
-                </div>
+                    </div>
+                </form>
             </div>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <p class="text-white mb-0">¿Ya tienes una cuenta?</p>
+                <a class="text-reset text-decoration-none mt-0" href="{{route('login')}}"><u>Inicia sesión aquí</u></a>
+            </div>
+
 
         </div>
     </div>
