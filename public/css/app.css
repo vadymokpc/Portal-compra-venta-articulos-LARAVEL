@@ -11272,7 +11272,6 @@ textarea.form-control-lg {
 /* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
 :root {
   --color3: #7BF51B;
-  --color1: #f30d8c;
 }
 
 /* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
@@ -11332,13 +11331,6 @@ body {
   height: 80vh;
 }
 
-/* .navbar {
-    background-color: #292920;
-} */
-/* .bg-white {
-    --bs-bg-opacity: 90;
-    background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity));
-  } */
 .flag-icon-background, .flag-icon {
   background-size: contain;
   background-position: 50%;
