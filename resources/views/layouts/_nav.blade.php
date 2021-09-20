@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white bg-opacity-25">
+<nav class="navbar navbar-expand-lg navbar-light bg-white bg-opacity-25 sticky-top">
 
     <div class="container">
 

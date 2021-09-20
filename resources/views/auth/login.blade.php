@@ -1,16 +1,13 @@
 @extends('layouts.app')
 @section('content')
 <!-- ======= FORM LOGIN ======= -->
-<div class="container-fluid">
-    <div class="row" height="200px">
-        <div class="col-12 col-md-12 d-flex flex-column align-items-center">
-            <div class="form-content">
+<div class="container-fluid my-5 py-5 altura">
+    <div class="row">
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex flex-column justify-content-center align-items-center">
                 <!--FORM TITLE -->
-                <div class="section-title">
-                    <h2 class="form-title space-around">LOGIN
-                    </h2>
-                    <!-- <p>Ut possimus qui ut temporibus culpa velit autem.</p> -->
-                </div>
+                    <h2 class="">LOGIN</h2>
+                
                 @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -21,33 +18,29 @@
                 </div>
                 @endif
                 <!--FORM FIELDS -->
-                <form action="/login" method="POST" role="form" class="php-email-form">
+                <form action="/login" method="POST" role="form" class="d-flex flex-column justify-content-center align-items-center">
                     @csrf
                     <!--Email -->
-                    <div class="form-field form-field-edit space-around my-2">
+                    
                         <input type="email" name="email" id="email" class="form-control forms_field-input"
                             placeholder="Your Email" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                        <div class="validate"></div>
-                    </div>
+                        
+                    
                     <!--Password -->
-                    <div class="form-field form-field-edit  space-around my-2">
-                        <input type="password" name="password" id="password" class="form-control forms_field-input"
+                    
+                        <input type="password" name="password" id="password" class="form-control forms_field-input mt-2"
                             placeholder="Your Password">
-                        <div class="validate"></div>
-                    </div>
+                        
                     <!--Button-Login-->
-                    <button type="submit" class=" form-button-edit text-center space-around my-2">
+                    <button type="submit" class=" text-center my-2">
                         Log-In
                     </button>
                 </form>
             </div>
-            <div class="div form-link d-flex mt-4 ms-5 ps-5 ">
-                <p class="text-white">¿No estás registrado? </p>
-                <a class="text-reset text-decoration-none ms-2" href="{{route('register')}}"><u> ¡Registrate aqui!</u></a>
+            <div class="form-link d-flex flex-column justify-content-center align-items-center ">
+                <p class="text-white mb-0">¿No estás registrado? </p>
+                <a class="text-reset text-decoration-none mt-0 ms-2 " href="{{route('register')}}"><u> ¡Registrate aqui!</u></a>
             </div>
-        </div>
-        <div class="col-12 col-md-4">
-            <img src="./media/bg-login.svg" alt="">
         </div>
     </div>
 </div>
