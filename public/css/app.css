@@ -11272,7 +11272,6 @@ textarea.form-control-lg {
 /* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
 :root {
   --color3: #7BF51B;
-  --color1: #f30d8c;
 }
 
 /* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
@@ -11325,16 +11324,19 @@ body {
   /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
   font-family: "Kanit", sans-serif;
   /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
-  background-color: #101412;
+  background-image: url("/imagenesRapido.es/portada.jpg");
+  background-repeat: no-repeat;
 }
 
-/* .navbar {
-    background-color: #292920;
-} */
-/* .bg-white {
-    --bs-bg-opacity: 90;
-    background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity));
-  } */
+.navbar {
+  background-color: #292920;
+}
+
+.bg-white {
+  --bs-bg-opacity: 90;
+  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity));
+}
+
 .flag-icon-background, .flag-icon {
   background-size: contain;
   background-position: 50%;
