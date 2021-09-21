@@ -5228,7 +5228,6 @@ document.Dropzone = __webpack_require__(/*! dropzone */ "./node_modules/dropzone
     });
   }
 })();
-/* Dropzone imagenes comportamiento servidor*/
 
 /***/ }),
 
