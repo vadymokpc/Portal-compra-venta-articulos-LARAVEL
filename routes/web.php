@@ -29,3 +29,4 @@ Route::post('/revisor/ad/{id}/accept',[RevisorController::class,'accept'])->name
 Route::post('/revisor/ad/{id}/reject',[RevisorController::class,'reject'])->name('revisor.ad.reject');
 //--------------------------------------Revisor aceptar o rechazar anuncio----------------------------------------------------------------------
 Route::post('/locale/{locale}', [PublicController::class,'locale'])->name('locale');// Ruta banderitas de idiomas
+Route::post('/ad/images/upload', [HomeController::class,'uploadImages'])->name('ad.images.upload');// Ruta comportamiento Drop zone imagenes

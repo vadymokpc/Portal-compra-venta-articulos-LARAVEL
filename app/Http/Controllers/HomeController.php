@@ -22,10 +22,18 @@ public function __construct()
 
 public function newAd() 
     {
-        return view('ad.new'); //Ruta para insertar nuevo anuncio
+        /*--------------------------------------Ruta creacion anuncio nuevo---------------------------------------------*/
+
+        /* return view('ad.new'); */ //Ruta para insertar nuevo anuncio
+        /*--------------------------------------Ruta creacion anuncio nuevo---------------------------------------------*/
+
+/*----------------------------------Generar identificadores únicos (codigo secreto)-------------------------------------------------*/
+
+$uniqueSecret = base_convert(sha1(uniqid(mt_rand())), 16, 36);
+return view('ad.new', compact('uniqueSecret')); 
+/*----------------------------------Generar identificadores únicos (codigo secreto)-------------------------------------------------*/
     }
 
-/*--------------------------------------Ruta creacion anuncio nuevo---------------------------------------------*/
 public function createAd(AdRequest $request) 
 
     {
@@ -36,9 +44,17 @@ public function createAd(AdRequest $request)
     $a->price = $request->input('price');        /* Precio */  
     $a->user_id = Auth::id();                    /* Visualizar el nombre del user creador del anuncio  */  
     $a->save();
-    return redirect()->route('home')->with('ad.create.success','Anuncio creado con exito');
+/*----------------------------------Generar identificadores únicos (codigo secreto)-------------------------------------------------*/
+$uniqueSecret = $request->input('uniqueSecret');
+    
+/*----------------------------------Generar identificadores únicos (codigo secreto)-------------------------------------------------*/
+return redirect()->route('home')->with('ad.create.success','Anuncio creado con exito');
     }
 /*--------------------------------------Ruta creacion anuncio nuevo---------------------------------------------*/
-
-    
+/*--------------------------------------Ruta comportamiento Drop zone imagenes---------------------------------------------*/
+public function uploadImages(Request $request)
+{
+    dd($request->all());
+}
+/*--------------------------------------Ruta comportamiento Drop zone imagenes---------------------------------------------*/    
 }

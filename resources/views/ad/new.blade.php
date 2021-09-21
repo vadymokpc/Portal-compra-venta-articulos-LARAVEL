@@ -5,9 +5,14 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Nuevo Anuncio
+                    <!-------------------------------------------------------Generar identificadores únicos (codigo secreto)--------------------------------------------------->
+                    Nuevo Anuncio (Secret: {{$uniqueSecret}})
+                    <!-------------------------------------------------------Generar identificadores únicos (codigo secreto)--------------------------------------------------->
                     <form method="POST" action='{{route("ad.create")}}'>
                         @csrf
+                        <!-------------------------------------------------------Generar identificadores únicos (codigo secreto)--------------------------------------------------->
+                        <input type="hidden" name="uniqueSecret" value="{{$uniqueSecret}}">
+                        <!-------------------------------------------------------Generar identificadores únicos (codigo secreto)--------------------------------------------------->
                         <!-- ----------------------------------------------Titulo------------------------------------------------ -->
                         <div class="form-group">
                             <label for="adName">Titulo</label>
@@ -41,9 +46,18 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <!-- ----------------------------------------------Desplegabe de categorias------------------------------------------------ -->
-
                         </div>
+                        <!-- ----------------------------------------------Desplegabe de categorias------------------------------------------------ -->
+                        <!-- -------------------------------------------Dropzone imagenes--------------------------------------------------- -->
+                        <div class="mb-3">
+                            <label for="adImages" class="form-label">Imagenes</label>
+                            <div class="dropzone" id="drophere"></div>
+                            @error('images')
+                            <small class="alert alert-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+                        <!-- ------------------------------------------Dropzone imagenes---------------------------------------------------- -->
+
                         <!-- ----------------------------------------------Anuncio text area------------------------------------------------ -->
                         <div class="form-group">
                             <label for="adBody">Anuncio</label>
