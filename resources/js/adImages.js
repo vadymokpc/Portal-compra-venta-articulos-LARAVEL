@@ -4,8 +4,6 @@ document.Dropzone = require('dropzone');
 /* Dropzone imagenes */
 
 
-
-
 /* Dropzone imagenes comportamiento servidor*/
 
 (function () {
@@ -24,4 +22,3 @@ document.Dropzone = require('dropzone');
         });
     }
 })();
-/* Dropzone imagenes comportamiento servidor*/

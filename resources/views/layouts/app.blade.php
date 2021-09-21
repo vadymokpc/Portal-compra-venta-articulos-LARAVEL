@@ -40,9 +40,6 @@
         </main>
     </div>
 
-    <!-- Scripts -->
-    <script src="{{mix('js/app.js')}}"></script>
-
     <script>
     /*-----------------------------------------Script para boton de logout------------------------------*/
     const logout = document.getElementById('logoutBtn');
@@ -54,6 +51,8 @@
     }
     /* ----------------------------------------Script para boton de logout------------------------------*/
     </script>
+    <!-- Scripts -->
+    <script src="{{mix('js/app.js')}}"></script>
 
 </body>
 

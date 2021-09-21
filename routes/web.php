@@ -22,7 +22,6 @@ Route::get('/ad/new', [HomeController::class,'newAd'])->name('ad.new');//Ruta pa
 Route::post('/ad/create', [HomeController::class,'createAd'])->name('ad.create');//Ruta guardado anuncio nuevo en DataBase
 //--------------------------------------Nuevo anuncio----------------------------------------------------------------------
 Route::get('/category/{name}/{id}/ads', [PublicController::class,'adsByCategory'])->name('category.ads');// Visualizar anuncios agrupados por categorias
-Route::get('/ad/{id}', [PublicController::class,'details'])->name("ad.details");// Pagina detalle de cada anuncio
 Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home');// Ruta para el revisor y ver los anuncios
 //--------------------------------------Revisor aceptar o rechazar anuncio----------------------------------------------------------------------
 Route::post('/revisor/ad/{id}/accept',[RevisorController::class,'accept'])->name('revisor.ad.accept');
@@ -30,3 +29,4 @@ Route::post('/revisor/ad/{id}/reject',[RevisorController::class,'reject'])->name
 //--------------------------------------Revisor aceptar o rechazar anuncio----------------------------------------------------------------------
 Route::post('/locale/{locale}', [PublicController::class,'locale'])->name('locale');// Ruta banderitas de idiomas
 Route::post('/ad/images/upload', [HomeController::class,'uploadImages'])->name('ad.images.upload');// Ruta comportamiento Drop zone imagenes
+Route::get('/ad/{id}', [PublicController::class,'details'])->name("ad.details");// Pagina detalle de cada anuncio
