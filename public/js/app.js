@@ -5206,13 +5206,11 @@ module.exports = {
   \**********************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /* Dropzone imagenes */
-
-
 document.Dropzone = __webpack_require__(/*! dropzone */ "./node_modules/dropzone/dist/dropzone.js");
 /* Dropzone imagenes */
 
+Dropzone.autoDiscover = false;
 /* Dropzone imagenes comportamiento servidor*/
 
 (function () {

@@ -1,8 +1,7 @@
-require('./bootstrap');
 /* Dropzone imagenes */
 document.Dropzone = require('dropzone');
 /* Dropzone imagenes */
-
+Dropzone.autoDiscover = false;
 
 /* Dropzone imagenes comportamiento servidor*/
 

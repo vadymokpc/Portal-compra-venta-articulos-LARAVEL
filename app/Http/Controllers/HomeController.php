@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ad;
+use App\Models\AdImage;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 
 class HomeController extends Controller
@@ -46,15 +49,37 @@ public function createAd(AdRequest $request)
     $a->save();
 /*----------------------------------Generar identificadores únicos (codigo secreto)-------------------------------------------------*/
 $uniqueSecret = $request->input('uniqueSecret');
-    
 /*----------------------------------Generar identificadores únicos (codigo secreto)-------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+$images = session()->get("images.{$uniqueSecret}");
+
+foreach($images as $image){
+    $i = new AdImage;
+    $fileName = basename($image);
+    $newFilePath = "public/ads/{$a->id}/{$fileName}";
+    Storage::move($image,$newFilePath);
+    $i->file = $newFilePath;
+    $i->ad_id = $a->id;
+    $i->save();
+}
+File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
+ /*-----------------------------------------------------------------------------------*/
+   
 return redirect()->route('home')->with('ad.create.success','Anuncio creado con exito');
     }
 /*--------------------------------------Ruta creacion anuncio nuevo---------------------------------------------*/
 /*--------------------------------------Ruta comportamiento Drop zone imagenes---------------------------------------------*/
 public function uploadImages(Request $request)
 {
-    dd($request->all());
+    
+$uniqueSecret = $request->input('uniqueSecret');
+$filePath = $request->file('file')->store("public/temp/{$uniqueSecret}");
+session()->push("images.{$uniqueSecret}", $filePath);
+
+return response()->json(
+    session()->get("images.{$uniqueSecret}")
+    
+);
 }
 /*--------------------------------------Ruta comportamiento Drop zone imagenes---------------------------------------------*/    
 }
