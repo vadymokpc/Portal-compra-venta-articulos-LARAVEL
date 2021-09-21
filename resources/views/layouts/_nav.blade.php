@@ -17,14 +17,14 @@
 
                         <a class="nuevoAnuncio nav-link fs-5 text-decoration-none text-white borderLeftRight "
                             href="{{ route('ad.new') }}">
-                            <span>Nuevo Anuncio</span>
+                            <span>{{__('ui.New Ad')}}</span>
                         </a>
                     </li>
                     <li class="nav-item dropdown borderLeftRight">
 
                         <a class="nav-link fs-5 text-decoration-none text-white dropdown-toggle" href="#"
                             id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span>Categorias</span>
+                            <span>{{__('ui.categories')}}</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @foreach ($categories as $category)
@@ -47,7 +47,7 @@
 
                     <li class="nav-item dropdown">
                         <a class="borderMarcador nav-link text-lowercase py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-white"
-                            href="{{route('register')}}"><span>Register</span></a>
+                            href="{{route('register')}}"><span>{{__('ui.register')}}</span></a>
                     </li>
 
                     @endguest
