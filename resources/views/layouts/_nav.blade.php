@@ -15,7 +15,7 @@
                 <div class="left-nav-elements d-flex">
                     <li class="nav-item">
 
-                        <a class="nav-link fs-5 text-decoration-none text-white borderLeftRight nuevoAnuncio"
+                        <a class="nuevoAnuncio nav-link fs-5 text-decoration-none text-white borderLeftRight "
                             href="{{ route('ad.new') }}">
                             <span>Nuevo Anuncio</span>
                         </a>
@@ -31,7 +31,6 @@
                             <li><a class="dropdown-item"
                                     href="{{route('category.ads',['name'=>$category->name,'id'=>$category->id])}}">{{$category->name}}</a>
                             </li>
-
                             @endforeach
                         </ul>
                     </li>

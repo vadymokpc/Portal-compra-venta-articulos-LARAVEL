@@ -11307,7 +11307,7 @@ textarea.form-control-lg {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: var(--color3);
   transform: scaleX(0);
   transition: transform 0.4s ease-in-out;
@@ -11324,7 +11324,8 @@ body {
   /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
   font-family: "Kanit", sans-serif;
   /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
-  background-color: #158ba8;
+  /* background-color: #158ba8; */
+  background-color: #f4c996;
   /* ---------------------------------------------Botones Login/Register ----------------------------------------------------*/
   /* ----------------------------------------------------------------------- */
   /* ----------------------------------Transicion superior de izquierda a derecha------------------------------------- */
@@ -11334,6 +11335,8 @@ body {
   /* ----------------------------------Transicion lateral derecho de arriba abajo------------------------------------- */
   /* ----------------------------------Transicion lateral izquierdo de abajo arriba------------------------------------- */
   /* ---------------------------------------------Botones Login/Register ----------------------------------------------------*/
+  /* ---------------------------------------------Nuevo anuncio ----------------------------------------------------*/
+  /* ---------------------------------------------Nuevo anuncio ----------------------------------------------------*/
 }
 body button {
   position: relative;
@@ -11353,8 +11356,8 @@ body button:hover {
   color: #255784;
   background: #2196f3;
   /* Color de alumbrado final neon */
-  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-  transition-delay: 1s;
+  box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+  transition-delay: 0.75s;
 }
 body button .botonLoginRegister {
   position: absolute;
@@ -11364,48 +11367,73 @@ body button .botonLoginRegister:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(90deg, transparent, #2196f3);
 }
 body button:hover .botonLoginRegister:nth-child(1) {
   left: 100%;
-  transition: 1s;
+  transition: 0.5s;
 }
 body button .botonLoginRegister:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #2196f3);
+  height: 3px;
+  background: linear-gradient(270deg, transparent, #FFB900);
 }
 body button:hover .botonLoginRegister:nth-child(3) {
   right: 100%;
-  transition: 1s;
-  transition-delay: 0.5s;
+  transition: 0.75s;
+  transition-delay: 0.2s;
 }
 body button .botonLoginRegister:nth-child(2) {
   top: -100%;
   right: 0;
-  width: 2px;
+  width: 3px;
   height: 100%;
   background: linear-gradient(180deg, transparent, #2196f3);
 }
 body button:hover .botonLoginRegister:nth-child(2) {
   top: 100%;
-  transition: 1s;
-  transition-delay: 0.25s;
+  transition: 0.75s;
+  transition-delay: 0.15s;
 }
 body button .botonLoginRegister:nth-child(4) {
   bottom: -100%;
   left: 0;
-  width: 2px;
+  width: 3px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #2196f3);
+  background: linear-gradient(360deg, transparent, #FFB900);
 }
 body button:hover .botonLoginRegister:nth-child(4) {
   bottom: 100%;
-  transition: 1s;
-  transition-delay: 0.75s;
+  transition: 0.75s;
+  transition-delay: 0.35s;
+}
+body .nuevoAnuncio {
+  position: relative;
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 50px;
+  border-style: none;
+  color: black;
+  /* Color del texto */
+  /* #2196f3 */
+  text-decoration: none;
+  font-size: 14px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+body .nuevoAnuncio {
+  color: #255784;
+  background: #FFB900;
+  /* Color de alumbrado final neon */
+  /* box-shadow: 0 0 10px #0D5EDB, 0 0 40px #0D5EDB, 0 0 80px #0D5EDB; */
+  transition-delay: 1s;
+}
+body .nuevoAnuncio .nuevoAnuncio {
+  position: absolute;
+  display: block;
 }
 
 .altura {
