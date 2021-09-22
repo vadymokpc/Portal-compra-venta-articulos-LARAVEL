@@ -11440,6 +11440,10 @@ body .nuevoAnuncio .nuevoAnuncio {
   height: 80vh;
 }
 
+.rowDetalles {
+  margin-top: 70px;
+}
+
 /* Libreria externa de iconos*/
 .flag-icon-background, .flag-icon {
   background-size: contain;

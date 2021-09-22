@@ -5,7 +5,7 @@
         'New Ad'=>'Nuevo Anuncio',
         'categories'=>'Categorias',
         'register'=>'Registrarse',
-
+        'createdby'=>'Creado por',
     ];
 /* -----------------------------------------Middleware para configurar el idioma en session-------------------------------------------------- */
 
