@@ -5224,6 +5224,9 @@ Dropzone.autoDiscover = false;
         uniqueSecret: uniqueSecret
       },
       addRemoveLinks: true,
+      //Opcion de borrar imagenes en dropzone 
+
+      /* ---------------------------------------------Que dropzone me enseñe las imágenes si están ubicadas en la sesión-------------------------------------------------------*/
       init: function init() {
         fetch("/ad/images?uniqueSecret=".concat(uniqueSecret), {
           method: 'GET'
@@ -5244,6 +5247,8 @@ Dropzone.autoDiscover = false;
         });
       }
     });
+    /* ---------------------------------------------Que dropzone me enseñe las imágenes si están ubicadas en la sesión-------------------------------------------------------*/
+
     myDropzone.on('success', function (file, response) {
       file.serverId = response.id;
     });

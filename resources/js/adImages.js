@@ -18,8 +18,8 @@ Dropzone.autoDiscover = false;
                 _token: csrfToken,
                 uniqueSecret: uniqueSecret
             },
-            addRemoveLinks: true,
-
+            addRemoveLinks: true, //Opcion de borrar imagenes en dropzone 
+            /* ---------------------------------------------Que dropzone me enseñe las imágenes si están ubicadas en la sesión-------------------------------------------------------*/
             init: () => {
                 fetch(`/ad/images?uniqueSecret=${uniqueSecret}`, {
                         method: 'GET',
@@ -41,7 +41,7 @@ Dropzone.autoDiscover = false;
                     })
             }
         });
-
+        /* ---------------------------------------------Que dropzone me enseñe las imágenes si están ubicadas en la sesión-------------------------------------------------------*/
         myDropzone.on('success', function (file, response) {
             file.serverId = response.id
         })

@@ -5,5 +5,6 @@ return [
     'New Ad'=>'Nuovo Annuncio',
     'categories'=>'Categorie',
     'register'=>'Registrati',
+    'createdby'=>'Creato da',
 ];
 /* -----------------------------------------Middleware para configurar el idioma en session-------------------------------------------------- */
