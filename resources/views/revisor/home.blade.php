@@ -36,14 +36,14 @@
                         </div>
                         <!-- ---------------------------------------Visualización de la imagen subida por un usuario---------------------------------------->
                         @foreach ($ad->images as $image)
-                        <div class="row">
+                        <div class="row justify-content-center">
                             <div class="col-md-4">
-                                <img src="{{ Storage::url($image->file) }}" class="img-fluid" alt="">
+                                <img src="{{$image->getUrl(300,150)}}" class="img-fluid" alt="">
                             </div>
                         </div>
                         @endforeach
                         <!-- ---------------------------------------Visualización de la imagen subida por un usuario---------------------------------------->
-                        <div class="col-md-9">
+                        <div class="col-md-9 justify-content-center">
                             {{$ad->body}}
                         </div>
                     </div>
@@ -52,17 +52,21 @@
             </div>
         </div>
     </div>
+
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form action="{{route('revisor.ad.reject',['id'=>$ad->id])}}" method="POST">
-                @csrf
-                <button type="submit" class="btn btn-danger">Rechazar</button>
-            </form>
-        </div>
-        <div class="col-md-6 text-right">
+
             <form action="{{route('revisor.ad.accept',['id'=>$ad->id])}}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-success">Aceptar</button>
+            </form>
+
+        </div>
+
+        <div class="col-md-6 text-right">
+            <form action="{{route('revisor.ad.reject',['id'=>$ad->id])}}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-danger">Rechazar</button>
             </form>
         </div>
     </div>

@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row rowDetalles">
-        <div class="col-12 col-md-6 d-flex flex-column align-items-baseline justify-content-center">
+        <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
             <h1 class="text-center my-card-title">{{$ad->title}}</h1>
             <p>{{$ad->body}}</p>
             <div>
