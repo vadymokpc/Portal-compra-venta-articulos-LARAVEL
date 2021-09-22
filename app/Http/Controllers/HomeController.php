@@ -50,9 +50,13 @@ public function createAd(AdRequest $request)
 /*----------------------------------Generar identificadores únicos (codigo secreto)-------------------------------------------------*/
 $uniqueSecret = $request->input('uniqueSecret');
 /*----------------------------------Generar identificadores únicos (codigo secreto)-------------------------------------------------*/
-/*-----------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------metodo guardar anuncio menos lasimagenes que se hayan suido y luego borrado-----*/
 $images = session()->get("images.{$uniqueSecret}");
 
+$removedImages = session()->get("removedImages.{$uniqueSecret}");
+
+$images = array_diff($images, $removedImages);
+/*--------------------------------------------------------------------metodo guardar anuncio menos lasimagenes que se hayan suido y luego borrado-----*/
 foreach($images as $image){
     $i = new AdImage;
     $fileName = basename($image);
@@ -77,9 +81,20 @@ $filePath = $request->file('file')->store("public/temp/{$uniqueSecret}");
 session()->push("images.{$uniqueSecret}", $filePath);
 
 return response()->json(
-    session()->get("images.{$uniqueSecret}")
+[
+                 'id'=> $filePath
+             ]
     
 );
 }
+
+public function removeImages(Request $request)
+    {       
+        $uniqueSecret = $request->input('uniqueSecret');
+        $fileName = $request->input('id');
+        session()->push("removedImages.{$uniqueSecret}", $fileName);
+        Storage::delete($fileName);
+        return response()->json('ok');
+    }
 /*--------------------------------------Ruta comportamiento Drop zone imagenes---------------------------------------------*/    
 }

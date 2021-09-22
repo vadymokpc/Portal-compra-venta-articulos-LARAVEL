@@ -17,7 +17,25 @@ Dropzone.autoDiscover = false;
             params: {
                 _token: csrfToken,
                 uniqueSecret: uniqueSecret
-            }
+            },
+            addRemoveLinks: true,
         });
+
+        myDropzone.on('success', function (file, response) {
+            file.serverId = response.id
+        })
+        myDropzone.on("removedfile", function (file) {
+            fetch('/ad/images/remove', {
+                method: 'DELETE', // *GET, POST, PUT, DELETE, etc.
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    _token: csrfToken,
+                    uniqueSecret: uniqueSecret,
+                    id: file.serverId
+                })
+            })
+        })
     }
 })();
