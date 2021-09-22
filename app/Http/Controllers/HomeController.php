@@ -2,6 +2,7 @@
 
 use App\Models\Ad;
 use App\Models\AdImage;
+use App\Jobs\ResizeImage;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
 use Illuminate\Support\Facades\Auth;
@@ -57,6 +58,14 @@ class HomeController extends Controller {
             $fileName=basename($image);
             $newFilePath="public/ads/{$a->id}/{$fileName}";
             Storage::move($image, $newFilePath);
+        /*--------------------------------------22---------------------------------------------*/
+
+            dispatch(new ResizeImage(
+            $newFilePath,
+            300,
+            150
+            ));
+        /*--------------------------------------22---------------------------------------------*/
             $i->file=$newFilePath;
             $i->ad_id=$a->id;
             $i->save();
@@ -72,11 +81,19 @@ class HomeController extends Controller {
     /*--------------------------------------Ruta comportamiento Drop zone imagenes---------------------------------------------*/
     public function uploadImages(Request $request) {
 
-        $uniqueSecret=$request->input('uniqueSecret');
-        $filePath=$request->file('file')->store("public/temp/{$uniqueSecret}");
-        session()->push("images.{$uniqueSecret}", $filePath);
+        $uniqueSecret = $request->input('uniqueSecret');
 
-        return response()->json([ 'id'=> $filePath]);
+        $filePath = $request->file('file')->store("public/temp/{$uniqueSecret}");
+        /*--------------------------------------22---------------------------------------------*/
+        dispatch(new ResizeImage($filePath,120,120));
+        /*--------------------------------------22---------------------------------------------*/
+        session()->push("images.{$uniqueSecret}", $filePath);
+        
+        return response()->json(
+            [ 
+               'id'=> $filePath
+            ]
+        );
     }
 
     public function removeImages(Request $request) {
@@ -101,13 +118,14 @@ class HomeController extends Controller {
             $data[]=[ 
             'id'=>$image,
             'name'=>basename($image),//Muestra nombre imagen subida en dropzone
-            'src'=>Storage::url($image),
+ /*--------------------------------------22---------------------------------------------*/           
+            'src' => AdImage::getUrlByFilePath($image, 120, 120),
+ /*--------------------------------------22---------------------------------------------*/           
             'size'=> Storage::size($image)]; //Muestra tamaño imagen subida en dropzone
 
         }
 
         return response()->json($data);
     }
-
     /*--------------------------------------ruta para que nos devuelva la imagen en caso de error de validacion---------------------------------------------*/
 }
