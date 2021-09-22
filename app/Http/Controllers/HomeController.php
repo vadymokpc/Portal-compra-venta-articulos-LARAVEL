@@ -23,17 +23,16 @@ public function __construct()
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 
-public function newAd() 
+public function newAd(Request $request) 
     {
-        /*--------------------------------------Ruta creacion anuncio nuevo---------------------------------------------*/
-
-        /* return view('ad.new'); */ //Ruta para insertar nuevo anuncio
-        /*--------------------------------------Ruta creacion anuncio nuevo---------------------------------------------*/
+        
 
 /*----------------------------------Generar identificadores únicos (codigo secreto)-------------------------------------------------*/
 
-$uniqueSecret = base_convert(sha1(uniqid(mt_rand())), 16, 36);
-return view('ad.new', compact('uniqueSecret')); 
+$uniqueSecret = $request->old(
+    'uniqueSecret',
+     base_convert(sha1(uniqid(mt_rand())), 16, 36));
+      return view('ad.new', compact('uniqueSecret')); //Ruta para insertar nuevo anuncio
 /*----------------------------------Generar identificadores únicos (codigo secreto)-------------------------------------------------*/
     }
 
@@ -51,9 +50,9 @@ public function createAd(AdRequest $request)
 $uniqueSecret = $request->input('uniqueSecret');
 /*----------------------------------Generar identificadores únicos (codigo secreto)-------------------------------------------------*/
 /*--------------------------------------------------------------------metodo guardar anuncio menos lasimagenes que se hayan suido y luego borrado-----*/
-$images = session()->get("images.{$uniqueSecret}");
+$images = session()->get("images.{$uniqueSecret}", []);
 
-$removedImages = session()->get("removedImages.{$uniqueSecret}");
+$removedImages = session()->get("removedImages.{$uniqueSecret}", []);
 
 $images = array_diff($images, $removedImages);
 /*--------------------------------------------------------------------metodo guardar anuncio menos lasimagenes que se hayan suido y luego borrado-----*/
@@ -97,4 +96,24 @@ public function removeImages(Request $request)
         return response()->json('ok');
     }
 /*--------------------------------------Ruta comportamiento Drop zone imagenes---------------------------------------------*/    
+/*--------------------------------------ruta para que nos devuelva la imagen en caso de error de validacion---------------------------------------------*/
+public function getImages(Request $request){
+            $uniqueSecret = $request->input('uniqueSecret');
+
+            $images = session()->get("images.{$uniqueSecret}", []);
+            $removedImages = session()->get("removedImages.{$uniqueSecret}",[]);
+            $images = array_diff($images, $removedImages);
+            $data = [];
+            foreach($images as $image){
+                $data[] = [
+                    'id' => $image,
+                    'name' => basename($image),
+                    'src' => Storage::url($image),
+                    'size'=> Storage::size($image)
+                ];
+               
+            }
+            return response()->json($data);
+        }
+ /*--------------------------------------ruta para que nos devuelva la imagen en caso de error de validacion---------------------------------------------*/
 }

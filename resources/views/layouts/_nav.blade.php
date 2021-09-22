@@ -46,7 +46,7 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="borderMarcador nav-link text-lowercase py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-white"
+                        <a class="borderMarcador nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-white"
                             href="{{route('register')}}"><span>{{__('ui.register')}}</span></a>
                     </li>
 
