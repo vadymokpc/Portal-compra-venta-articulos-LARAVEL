@@ -5,9 +5,12 @@ use App\Models\AdImage;
 use App\Jobs\ResizeImage;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
+use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use App\Jobs\GoogleVisionRemoveFaces;
 use Illuminate\Support\Facades\Storage;
+use App\Jobs\GoogleVisionSafeLabelImage;
 use App\Jobs\GoogleVisionSafeSearchImage;
 
 
@@ -60,24 +63,19 @@ class HomeController extends Controller {
             $fileName=basename($image);
             $newFilePath="public/ads/{$a->id}/{$fileName}";
             Storage::move($image, $newFilePath);
+            $i->file = $newFilePath;
+            $i->ad_id = $a->id;
+            $i->save();
         /*--------------------------------------1 Recorte de las imagenes---------------------------------------------*/
 
-            dispatch(new ResizeImage(   //
-            $newFilePath,
-            300,
-            150
-            ));
-            dispatch(new ResizeImage(   //
-                $newFilePath,
-                600,
-                600
-                ));
-        /*--------------------------------------22---------------------------------------------*/
-            $i->file=$newFilePath;
-            $i->ad_id=$a->id;
-            $i->save();
-            /*--------------------------------------7---------------------------------------------*/
-            dispatch(new GoogleVisionSafeSearchImage($i->id));
+  
+                Bus::chain([
+                    new GoogleVisionSafeSearchImage($i->id),
+                    new GoogleVisionSafeLabelImage($i->id),
+                    new GoogleVisionRemoveFaces($i->id),
+                    new ResizeImage($i->file, 300,150),
+                    new ResizeImage($i->file, 600,600)
+                ])->dispatch();
             /*--------------------------------------7---------------------------------------------*/
         }
 
