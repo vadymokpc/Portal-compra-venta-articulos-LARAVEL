@@ -59,7 +59,7 @@
                     <li class="nav-item dropdown">
                         <a id="logoutBtn"
                             class=" nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-white"
-                            href="#">Logout</a>
+                            href="#">{{__('ui.logout')}}</a>
                     </li>
                     <!-- ---------------------------------------nombre de usuario autentificado----------------------------------------------------------------- -->
                     <li class="nav-item py-2 text-white">
