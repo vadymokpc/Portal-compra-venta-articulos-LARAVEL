@@ -58,13 +58,18 @@ class HomeController extends Controller {
             $fileName=basename($image);
             $newFilePath="public/ads/{$a->id}/{$fileName}";
             Storage::move($image, $newFilePath);
-        /*--------------------------------------22---------------------------------------------*/
+        /*--------------------------------------1 Recorte de las imagenes---------------------------------------------*/
 
-            dispatch(new ResizeImage(
+            dispatch(new ResizeImage(   //
             $newFilePath,
             300,
             150
             ));
+            dispatch(new ResizeImage(   //
+                $newFilePath,
+                600,
+                600
+                ));
         /*--------------------------------------22---------------------------------------------*/
             $i->file=$newFilePath;
             $i->ad_id=$a->id;
