@@ -47,7 +47,6 @@
                                 medical : {{ $image->medical}} <br>
                                 violence : {{ $image->violence}} <br>
                                 racy : {{ $image->racy}} <br>
-
                                 {{ $image->id}} <br>
                                 {{ $image->file}} <br>
                                 {{ Storage:: url($image->file)}} <br>

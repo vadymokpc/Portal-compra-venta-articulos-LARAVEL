@@ -74,8 +74,7 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
-                <div class="card-body">
-                </div>
+
             </div>
         </div>
     </div>
