@@ -40,6 +40,19 @@
                             <div class="col-md-4">
                                 <img src="{{$image->getUrl(300,150)}}" class="img-fluid" alt="">
                             </div>
+                            <!-- ---------------------------------------7---------------------------------------->
+                            <div class="col-md-8">
+                                Adult : {{ $image->adult}} <br>
+                                spoof : {{ $image->spoof}} <br>
+                                medical : {{ $image->medical}} <br>
+                                violence : {{ $image->violence}} <br>
+                                racy : {{ $image->racy}} <br>
+
+                                {{ $image->id}} <br>
+                                {{ $image->file}} <br>
+                                {{ Storage:: url($image->file)}} <br>
+                            </div>
+                            <!-- ---------------------------------------7---------------------------------------->
                         </div>
                         @endforeach
                         <!-- ---------------------------------------Visualización de la imagen subida por un usuario---------------------------------------->
@@ -73,7 +86,7 @@
 </div>
 
 @else
-<h3 class="text-center"> no hay anuncios para revisar </h3>
+<h3 class="text-center">{{__('ui.checkrevisor')}}</h3>
 
 @endif
 

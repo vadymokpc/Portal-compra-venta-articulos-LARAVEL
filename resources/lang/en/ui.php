@@ -6,5 +6,7 @@ return [
     'categories'=>'Categories',
     'register'=>'Register',
     'createdby'=>'Created by',
+    'checkrevisor'=>'There are no ads to review!',
+    'login'=>'Login',
 ];
 /* -----------------------------------------Middleware para configurar el idioma en session-------------------------------------------------- */
