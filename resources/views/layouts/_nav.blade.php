@@ -41,8 +41,8 @@
                     @guest
 
                     <li class="nav-item dropdown">
-                        <a class="borderMarcador nav-link text-lowercase py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-white"
-                            href="{{route('login')}}"><span>Login</span></a>
+                        <a class="borderMarcador nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-white"
+                            href="{{route('login')}}"><span>{{__('ui.login')}}</span></a>
                     </li>
 
                     <li class="nav-item dropdown">

@@ -6,5 +6,7 @@ return [
     'categories'=>'Categorie',
     'register'=>'Registrati',
     'createdby'=>'Creato da',
+    'checkrevisor'=>'Non ci sono annunci da recensire!',
+    'login'=>'Accesso',
 ];
 /* -----------------------------------------Middleware para configurar el idioma en session-------------------------------------------------- */

@@ -8,6 +8,8 @@ use App\Http\Requests\AdRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use App\Jobs\GoogleVisionSafeSearchImage;
+
 
 
 class HomeController extends Controller {
@@ -74,6 +76,9 @@ class HomeController extends Controller {
             $i->file=$newFilePath;
             $i->ad_id=$a->id;
             $i->save();
+            /*--------------------------------------7---------------------------------------------*/
+            dispatch(new GoogleVisionSafeSearchImage($i->id));
+            /*--------------------------------------7---------------------------------------------*/
         }
 
         File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));

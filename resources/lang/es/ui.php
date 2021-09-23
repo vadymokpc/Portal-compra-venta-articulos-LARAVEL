@@ -6,6 +6,8 @@
         'categories'=>'Categorias',
         'register'=>'Registrarse',
         'createdby'=>'Creado por',
+        'checkrevisor'=>'¡No hay anuncios por revisar',
+        'login'=>'Iniciar sesión',
     ];
 /* -----------------------------------------Middleware para configurar el idioma en session-------------------------------------------------- */
 
