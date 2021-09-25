@@ -21,7 +21,6 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown borderLeftRight">
-
                         <a class="nav-link fs-5 text-decoration-none text-white dropdown-toggle" href="#"
                             id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span>{{__('ui.categories')}}</span>
@@ -34,6 +33,12 @@
                             @endforeach
                         </ul>
                     </li>
+                    <!-- ---------------------------------------Buscador----------------------------------------------------------------- -->
+                    <form action="{{ route('search') }}" method="GET" class="d-flex">
+                        <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <!-- ---------------------------------------Buscador----------------------------------------------------------------- -->
                 </div>
 
                 <div class="right-nav-elements d-flex align-items-center">

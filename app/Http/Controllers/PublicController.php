@@ -39,5 +39,14 @@ class PublicController extends Controller {
         return redirect()->back();
     }
     /*-------------------------------------------------------------------------------------------*/
-
+    /*--------------------------------------------9 Ruta para el buscador de la navbar----------------------------------------------*/
+    public function search(Request $request)
+    {
+        $q = $request->input('q');
+        $ads = Ad::search($q)
+            ->where('is_accepted', true)
+            ->get();
+        return view('search_results', compact('q', 'ads'));
+    }  
+    /*--------------------------------------------9 Ruta para el buscador de la navbar----------------------------------------------*/
 }

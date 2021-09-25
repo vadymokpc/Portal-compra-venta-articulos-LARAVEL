@@ -32,4 +32,5 @@ Route::post('/ad/images/upload', [HomeController::class,'uploadImages'])->name('
 
 Route::delete('/ad/images/remove', [HomeController::class,'removeImages'])->name('ad.images.remove');//ruta para eliminar imagenes
 Route::get('/ad/images', [HomeController::class,'getImages'])->name('ad.images');//ruta para que nos devuelva la imagen en caso de error de validacion
+Route::get('/search', [PublicController::class,'search'])->name('search');//Ruta para el buscador de la navbar
 Route::get('/ad/{id}', [PublicController::class,'details'])->name("ad.details");// Pagina detalle de cada anuncio

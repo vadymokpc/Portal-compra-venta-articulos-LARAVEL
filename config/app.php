@@ -1,5 +1,7 @@
 <?php
 
+
+
 return [
 
     /*
@@ -139,6 +141,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+       
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -161,6 +164,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        // user 9
+        TeamTNT\Scout\TNTSearchScoutServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class,
+                // user 9
 
         /*
          * Package Service Providers...
