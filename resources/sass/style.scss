@@ -244,3 +244,31 @@ body {
 .nombreCategoria {
     text-align: center;
 }
+
+.rounded-pill {
+    position: relative;
+    display: inline-block;
+    padding: 7px 10px;
+
+    border-style: none;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+
+.botonBuscar {
+    position: relative;
+    display: inline-block;
+    padding: 5px 50px;
+    border-radius: 50px;
+    border-style: none;
+    color: #2196f3;
+    /* Color del texto */
+    /* #2196f3 */
+    text-transform: uppercase;
+    text-align: center;
+
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+}
