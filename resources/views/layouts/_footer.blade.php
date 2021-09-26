@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-white bg-opacity-25 text-muted mt-5 navbar-fixed-bottom">
+<footer class="text-center text-lg-start bg-white bg-opacity-25 text-muted mt-5">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom">
         <!-- Left -->
@@ -56,10 +56,10 @@
                     <h6 class="text-uppercase fw-bold mb-4">
                         Products
                     </h6>
-                    <div class="mover">
+                    <div class="mover d-flex flex-wrap justify-content-between">
                         @foreach ($categories as $category)
 
-                        <a class="my-category"
+                        <a class="my-category text-muted text-decoration-none"
                             href="{{route('category.ads',['name'=>$category->name,'id'=>$category->id])}}">{{$category->name}}</a>
 
 
@@ -81,10 +81,10 @@
                     <p><i class="fas fa-home me-3"></i> Barcelona</p>
                     <p>
                         <i class="fas fa-envelope me-3"></i>
-                        vadlex@teamvadlex.com
+                        Vadlex@teamvadlex.com
                     </p>
                     <p><i class="fas fa-phone me-3"></i> 600019008</p>
-                    <p><i class="fas fa-print me-3"></i> 697851024</p>
+                    <p><i class="fas fa-phone me-3"></i> 697851024</p>
                 </div>
                 <!-- Grid column -->
             </div>
@@ -95,7 +95,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2021 Copyright: Todos los derechos reservados
+        ©️ 2021 Copyright: Todos los derechos reservados
         <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Rápido.es</a>
     </div>
     <!-- Copyright -->

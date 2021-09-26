@@ -39,7 +39,7 @@
 
                     <form action="{{ route('search') }}" method="GET" class="d-flex">
 
-                        <input class="rounded-pill w-100 p-2 me-3 left-nav-elements" type="text" name="q"
+                        <input class="rounded-pill buscador w-100 p-2 me-3 left-nav-elements" type="text" name="q"
                             placeholder="Buscar en todas las categorias" aria-label="Search">
 
                         <button class="botonBuscar" type="submit">Buscar</button>

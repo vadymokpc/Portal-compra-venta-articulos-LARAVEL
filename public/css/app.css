@@ -11504,9 +11504,13 @@ body .nuevoAnuncio .nuevoAnuncio {
 }
 
 .textoCard {
-  width: 270px;
+  width: 100%;
   height: 100px;
   overflow: hidden;
+}
+
+.buscador {
+  outline: none;
 }
 
 /* Libreria externa de iconos*/
