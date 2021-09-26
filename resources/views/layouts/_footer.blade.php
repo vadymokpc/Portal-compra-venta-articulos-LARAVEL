@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-white bg-opacity-25 text-muted mt-5 navbar-fixed-bottom">
+<footer class="text-center text-lg-start bg-white bg-opacity-25 text-muted mt-5">
   <!-- Section: Social media -->
   <section
     class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom"
@@ -58,10 +58,10 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Products
           </h6>
-          <div class="mover">
+          <div class="mover d-flex flex-wrap justify-content-between">
           @foreach ($categories as $category)
            
-                <a class="my-category"
+                <a class="my-category text-muted text-decoration-none"
                     href="{{route('category.ads',['name'=>$category->name,'id'=>$category->id])}}">{{$category->name}}</a>
                
             
