@@ -4,7 +4,7 @@
             <div class="card mb-5  cardHome" style="width: 18rem;">
                 <!-- ---------------------------------------------Carussel de fotos---------------------------------------------------------------------------------------------------------------------------------->
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                    <div class="carousel-inner carouselImagen">
                         @foreach ($ad->images as $image)
                         <div class="carousel-item @if($loop->first)active @endif">
                             <img src="{{$image->getUrl(300,150)}}" class=" d-block w-100" alt="...">
