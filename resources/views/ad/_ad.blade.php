@@ -1,7 +1,7 @@
         <!-- ---------------------------------------------Card home---------------------------------------------------------------------------------------------------------------------------------->
         @foreach($ads as $ad)
         <div class="col-12 col-md-3 d-flex justify-content-center">
-            <div class="card mb-5  cardHome" style="width: 18rem;">
+            <div class="card mb-5 cardHome" style="width: 18rem;">
                 <!-- ---------------------------------------------Carussel de fotos---------------------------------------------------------------------------------------------------------------------------------->
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner carouselImagen">
