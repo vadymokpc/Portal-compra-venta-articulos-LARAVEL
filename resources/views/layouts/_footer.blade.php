@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-white bg-opacity-25 text-muted mt-5">
+<footer class="text-center text-lg-start bg-white bg-opacity-25 text-muted mt-5 navbar-fixed-bottom">
   <!-- Section: Social media -->
   <section
     class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom"
