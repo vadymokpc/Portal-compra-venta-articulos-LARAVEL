@@ -35,7 +35,8 @@
                     </li>
                     <!-- ---------------------------------------Buscador----------------------------------------------------------------- -->
                     <form action="{{ route('search') }}" method="GET" class="d-flex">
-                        <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
+                        <input class="form-control me-2" type="text" name="q"
+                            placeholder="Buscar en todas las categorias " aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     <!-- ---------------------------------------Buscador----------------------------------------------------------------- -->

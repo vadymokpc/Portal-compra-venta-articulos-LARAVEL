@@ -15,7 +15,7 @@
         <div class="col-12 col-md-6">
             <!-- -------------------------------------------Detalle carussel------------------------------------------------------------------------------------------------------------------------------------>
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
+                <div class="carousel-inner carouselEstilo">
                     @foreach ($ad->images as $image)
                     <div class="carousel-item @if($loop->first)active @endif">
                         <img src="{{$image->getUrl(600,600)}}"" class=" d-block w-100" alt="...">
