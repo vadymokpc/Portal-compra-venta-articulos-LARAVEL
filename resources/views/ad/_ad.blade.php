@@ -1,7 +1,7 @@
         <!-- ---------------------------------------------Card home---------------------------------------------------------------------------------------------------------------------------------->
         @foreach($ads as $ad)
         <div class="col-12 col-md-3 d-flex justify-content-center">
-            <div class="card mb-5  cardHome" style="width: 18rem;">
+            <div class="card mb-5 cardHome" style="width: 18rem;">
                 <!-- ---------------------------------------------Carussel de fotos---------------------------------------------------------------------------------------------------------------------------------->
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner carouselImagen">
@@ -29,16 +29,21 @@
                     <p class="card-text"> {{$ad->body}}</p>
                     <h6 class="card-subtitle mb-2">
                         <!-- -------------------------------------Visualizar  "categoria por cada tarjeta en home------------------------------------------------------------------------------------------------------------------------------------------>
-                        <strong>{{__('ui.categorie')}}: <a
-                                href="{{route('category.ads',['name'=>$ad->category->name,'id'=>$ad->category->id])}}">{{$ad->category->name}}</a></strong>
+                        <div class="nombreCategoria">
+                            <strong>{{__('ui.categorie')}}: <a
+                                    href="{{route('category.ads',['name'=>$ad->category->name,'id'=>$ad->category->id])}}">{{$ad->category->name}}</a></strong>
+                        </div>
                         <!-- --------------------------------------Visualizar  "categoria por cada tarjeta en home----------------------------------------------------------------------------------------------------------------------------------------->
                         <!-- --------------------------------------Formato de fecha y hora ordenado  , Visualizar el nombre del user creador del anuncio----------------------------------------------------------------------------------------------------------------------------------------->
-
-                        <i>{{$ad->created_at->format('d/m/Y')}} - {{ $ad->user->name }}</i>
+                        <div class="nombreUser">
+                            <i>{{$ad->created_at->format('d/m/Y')}} - {{ $ad->user->name }}</i>
+                        </div>
                     </h6>
                     <!-- ------------------------------------------Formato de fecha y hora ordenado  , Visualizar el nombre del user creador del anuncio------------------------------------------------------------------------------------------------------------------------------------>
                     <!---------------------------------------------Visualizar  "DETALLE" por cada tarjeta en vista Details ---------------------------------------------------------------------------->
-                    <a href="{{route('ad.details', ['id'=>$ad->id])}}">Leer más</a>
+                    <div class="linkDetalle">
+                        <a href="{{route('ad.details', ['id'=>$ad->id])}}">Detalle</a>
+                    </div>
                     <!---------------------------------------------Visualizar  "DETALLE" por cada tarjeta en vista Details ---------------------------------------------------------------------------->
                 </div>
             </div>
