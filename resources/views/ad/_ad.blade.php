@@ -1,6 +1,6 @@
         <!-- ---------------------------------------------Card home---------------------------------------------------------------------------------------------------------------------------------->
         @foreach($ads as $ad)
-        <div class="col-12 col-md-4 d-flex justify-content-center">
+        <div class="col-12 col-md-3 d-flex justify-content-center">
             <div class="card mb-5  cardHome" style="width: 18rem;">
                 <!-- ---------------------------------------------Carussel de fotos---------------------------------------------------------------------------------------------------------------------------------->
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -28,7 +28,6 @@
                     <h6 class="card-subtitle mb-2 text-muted">{{$ad->price}} €</h6>
                     <p class="card-text"> {{$ad->body}}</p>
                     <h6 class="card-subtitle mb-2">
-
                         <!-- -------------------------------------Visualizar  "categoria por cada tarjeta en home------------------------------------------------------------------------------------------------------------------------------------------>
                         <strong>{{__('ui.categorie')}}: <a
                                 href="{{route('category.ads',['name'=>$ad->category->name,'id'=>$ad->category->id])}}">{{$ad->category->name}}</a></strong>

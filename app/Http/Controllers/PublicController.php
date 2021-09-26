@@ -10,7 +10,7 @@ class PublicController extends Controller {
         /*--------------------------------------Flitrado de anuncios aceptados por revisor-----------------------------------------------------*/
         $ads = Ad::where('is_accepted',true)
         ->orderBy('created_at', 'desc') 
-        ->take(3)                         /* Visualizacion ultimos 6 anuncios en orden descendiente EN HOME */
+        ->take(4)                         /* Visualizacion ultimos 6 anuncios en orden descendiente EN HOME */
         ->get();
         return view('home', compact('ads'));
         /*---------------------------------------Flitrado de anuncios aceptados por revisor----------------------------------------------------*/
