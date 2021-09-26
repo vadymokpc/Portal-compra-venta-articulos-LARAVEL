@@ -11466,6 +11466,18 @@ body .nuevoAnuncio .nuevoAnuncio {
   border-radius: 8px;
 }
 
+.linkDetalle {
+  text-align: center;
+}
+
+.nombreUser {
+  text-align: center;
+}
+
+.nombreCategoria {
+  text-align: center;
+}
+
 /* Libreria externa de iconos*/
 .flag-icon-background, .flag-icon {
   background-size: contain;

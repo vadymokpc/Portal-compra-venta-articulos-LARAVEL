@@ -37,9 +37,9 @@
                 <!-- ---------------------------------------Buscador----------------------------------------------------------------- -->
                 <div class="center-nav-elements d-flex align-items-center">
                     <form action="{{ route('search') }}" method="GET" class="d-flex">
-                        <input class="form-control me-1 left-nav-elements" type="text" name="q" placeholder="Buscar"
-                            aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        <input class="form-control me-1 left-nav-elements" type="text" name="q"
+                            placeholder="Buscar en todas las categorias" aria-label="Search">
+                        <button class="button btn btn-light" type="submit">Buscar</button>
                     </form>
                 </div>
                 <!-- ---------------------------------------Buscador----------------------------------------------------------------- -->
