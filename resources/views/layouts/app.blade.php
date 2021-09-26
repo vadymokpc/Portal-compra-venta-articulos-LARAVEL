@@ -11,6 +11,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <!-- Styles -->
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <!-- Google fonts "Extra-light 200"  -->
@@ -38,8 +39,9 @@
         <main class="container py-4">
             @yield('content')
         </main>
+        
     </div>
-
+    @include('layouts._footer')
     <script>
     /*-----------------------------------------Script para boton de logout------------------------------*/
     const logout = document.getElementById('logoutBtn');

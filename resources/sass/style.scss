@@ -259,16 +259,22 @@ body {
 .botonBuscar {
     position: relative;
     display: inline-block;
-    padding: 5px 50px;
-    border-radius: 50px;
+    padding-right: 20px;
+    border-radius: 10px;
     border-style: none;
-    color: #2196f3;
-    /* Color del texto */
-    /* #2196f3 */
-    text-transform: uppercase;
-    text-align: center;
-
+    color: #0e0f0f;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+.precioCard {
+    font-weight: bolder;
+
+}
+
+.textoCard {
+    width: 270px;
+    height: 100px;
     overflow: hidden;
 }

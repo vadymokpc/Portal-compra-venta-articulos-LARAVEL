@@ -7,7 +7,7 @@
                     <div class="carousel-inner carouselImagen">
                         @foreach ($ad->images as $image)
                         <div class="carousel-item @if($loop->first)active @endif">
-                            <img src="{{$image->getUrl(300,150)}}" class=" d-block w-100" alt="...">
+                            <img src="{{$image->getUrl(300,350)}}" class=" d-block w-100" alt="...">
                         </div>
                         @endforeach
                     </div>
@@ -23,11 +23,15 @@
                     </button>
                 </div>
                 <!-- ---------------------------------------------Carussel de fotos---------------------------------------------------------------------------------------------------------------------------------->
+                <!-- ---------------------------------------------Titulo, Precio, Descripcion---------------------------------------------------------------------------------------------------------------------------------->
                 <div class="card-body">
                     <h5 class="card-title"> {{$ad->title}}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{$ad->price}} €</h6>
-                    <p class="card-text"> {{$ad->body}}</p>
+                    <h6 class="precioCard card-subtitle mb-2 ">{{$ad->price}} €</h6>
+                    <div class="textoCard">
+                        <p class="card-text"> {{$ad->body}}</p>
+                    </div>
                     <h6 class="card-subtitle mb-2">
+                        <!-- ---------------------------------------------Titulo, Precio, Descripcion---------------------------------------------------------------------------------------------------------------------------------->
                         <!-- -------------------------------------Visualizar  "categoria por cada tarjeta en home------------------------------------------------------------------------------------------------------------------------------------------>
                         <div class="nombreCategoria">
                             <strong>{{__('ui.categorie')}}: <a

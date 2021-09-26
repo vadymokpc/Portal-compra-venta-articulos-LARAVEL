@@ -73,8 +73,8 @@ class HomeController extends Controller {
                     new GoogleVisionSafeSearchImage($i->id),
                     new GoogleVisionSafeLabelImage($i->id),
                     new GoogleVisionRemoveFaces($i->id),
-                    new ResizeImage($i->file, 300,150),
-                    new ResizeImage($i->file, 600,600)
+                    new ResizeImage($i->file, 300,350),
+                    new ResizeImage($i->file, 600,450)
                 ])->dispatch();
             /*--------------------------------------7---------------------------------------------*/
         }
