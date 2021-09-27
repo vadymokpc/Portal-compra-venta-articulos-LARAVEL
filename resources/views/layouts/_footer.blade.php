@@ -4,7 +4,7 @@
     <section class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block">
-            <span>Get connected with us on social networks:</span>
+            <span>{{__('ui.conecta')}}</span>
         </div>
         <!-- Left -->
 
@@ -45,7 +45,7 @@
                         <i class="fas fa-gem me-3"></i>Rápido.es
                     </h6>
                     <p>
-                        Vende lo que no necesites, ¡Y gana dinero!
+                        {{__('ui.vende')}}
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -54,7 +54,7 @@
                 <div class="col-md-5 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Products
+                        {{__('ui.categories')}}
                     </h6>
                     <div class="mover d-flex flex-wrap justify-content-between">
                         @foreach ($categories as $category)
@@ -76,7 +76,7 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Contact
+                        {{__('ui.contacta')}}
                     </h6>
                     <p><i class="fas fa-home me-3"></i> Barcelona</p>
                     <p>
@@ -95,7 +95,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        ©️ 2021 Copyright: Todos los derechos reservados
+        {{__('ui.copyright')}}
         <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Rápido.es</a>
     </div>
     <!-- Copyright -->
