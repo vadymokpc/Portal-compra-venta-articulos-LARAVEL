@@ -193,7 +193,7 @@ body {
 
 
     /* ---------------------------------------------Nuevo anuncio ----------------------------------------------------*/
-    
+
 }
 
 .altura {
@@ -243,4 +243,42 @@ body {
 
 .nombreCategoria {
     text-align: center;
+}
+
+.rounded-pill {
+    position: relative;
+    display: inline-block;
+    padding: 7px 10px;
+
+    border-style: none;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+
+.botonBuscar {
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+    border-radius: 10px;
+    border-style: none;
+    color: #0e0f0f;
+    text-decoration: none;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+.precioCard {
+    font-weight: bolder;
+
+}
+
+.textoCard {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.buscador {
+    outline: none;
 }
