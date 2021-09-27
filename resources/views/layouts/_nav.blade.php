@@ -1,9 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white bg-opacity-25 sticky-top">
+<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-white bg-opacity-25 sticky-top">
 
     <div class="container">
 
-        <a class="navbar-brand fs-5 text-decoration-none text-white borderLeftRight"
-            href="{{ route('home') }}">Rapido.es</a>
+        <a class="navbar-brand fs-5 text-decoration-none  borderLeftRight" href="{{ route('home') }}">Rapido.es</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,14 +14,14 @@
                 <div class="left-nav-elements d-flex">
                     <li class="nav-item">
 
-                        <a class="nuevoAnuncio nav-link fs-5 text-decoration-none text-white borderLeftRight "
+                        <a class="nuevoAnuncio nav-link fs-5 text-decoration-none  borderLeftRight "
                             href="{{ route('ad.new') }}">
                             <span>{{__('ui.New Ad')}}</span>
                         </a>
                     </li>
                     <li class="nav-item dropdown borderLeftRight">
-                        <a class="nav-link fs-5 text-decoration-none text-white dropdown-toggle" href="#"
-                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link fs-5 text-decoration-none  dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span>{{__('ui.categories')}}</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

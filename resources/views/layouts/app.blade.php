@@ -11,7 +11,8 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <!-- Styles -->
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <!-- Google fonts "Extra-light 200"  -->
@@ -39,7 +40,7 @@
         <main class="container py-4">
             @yield('content')
         </main>
-        
+
     </div>
     @include('layouts._footer')
     <script>
@@ -52,6 +53,29 @@
         });
     }
     /* ----------------------------------------Script para boton de logout------------------------------*/
+    /* ----------------------------------------Script para cambiar el color de l navbar------------------------------*/
+    let nav = document.querySelector('#nav')
+    document.addEventListener('scroll', () => {
+        if (window.pageYOffset > 150) {
+            nav.classList.remove('bg-opacity-25')
+            nav.classList.add('text-dark')
+            nav.classList.remove('text-white')
+            nav.classList.remove('bg-white')
+            nav.style.backgroundColor = '#f4c996'
+            nav.classList.add('shadow')
+        } else {
+            nav.classList.add('bg-opacity-25')
+            nav.classList.add('text-white')
+            nav.classList.add('bg-white')
+            nav.classList.remove('text-dark')
+            nav.classList.remove('shadow')
+
+        }
+        console.log()
+    })
+
+
+    /* ----------------------------------------Script para cambiar el color de l navbar------------------------------*/
     </script>
     <!-- Scripts -->
     <script src="{{mix('js/app.js')}}"></script>
