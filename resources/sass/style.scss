@@ -233,10 +233,37 @@ body {
     border-radius: 8px;
 }
 
+/* ---------------------------------------------Link Detalle----------------------------------------------------*/
+
 .linkDetalle {
     text-align: center;
+
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 50px;
+    border-style: none;
+    color: black;
+    /* Color del texto */
+    /* #2196f3 */
+
+    text-decoration: none;
+    overflow: hidden;
+
 }
 
+.linkDetalle
+
+/* :hover */
+    {
+    color: #255784;
+    background: #FFB900;
+    /* Color de alumbrado final neon */
+    /* box-shadow: 0 0 10px #0D5EDB, 0 0 40px #0D5EDB, 0 0 80px #0D5EDB; */
+
+}
+
+
+/* ---------------------------------------------Link Detalle----------------------------------------------------*/
 .nombreUser {
     text-align: center;
 }

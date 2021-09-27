@@ -18,7 +18,7 @@
                 <div class="carousel-inner carouselEstilo">
                     @foreach ($ad->images as $image)
                     <div class="carousel-item @if($loop->first)active @endif">
-                        <img src="{{$image->getUrl(600,450)}}"" class=" d-block w-100" alt="...">
+                        <img src="{{$image->getUrl(500,500)}}"" class=" d-block w-100" alt="...">
                     </div>
                     @endforeach
                 </div>

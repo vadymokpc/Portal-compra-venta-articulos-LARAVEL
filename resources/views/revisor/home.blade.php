@@ -38,7 +38,7 @@
                         @foreach ($ad->images as $image)
                         <div class="row justify-content-center">
                             <div class="col-md-4">
-                                <img src="{{$image->getUrl(300,150)}}" class="img-fluid" alt="">
+                                <img src="{{$image->getUrl(300,350)}}" class="img-fluid" alt="">
                             </div>
                             <!-- ---------------------------------------7---------------------------------------->
                             <div class="col-md-8">

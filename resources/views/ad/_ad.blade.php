@@ -1,31 +1,15 @@
         <!-- ---------------------------------------------Card home---------------------------------------------------------------------------------------------------------------------------------->
         @foreach($ads as $ad)
-        <div class="col-12 col-md-3 d-flex justify-content-center">
+        <div class="col-12 col-md-3 d-flex justify-content-center ">
             <div class="card mb-5 cardHome" style="width: 18rem;">
                 <!-- ---------------------------------------------Carussel de fotos---------------------------------------------------------------------------------------------------------------------------------->
                 @foreach ($ad->images as $image)
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner carouselImagen">
-
-                        <div class="carousel-item @if($loop->first)active @endif">
-                            <img src="{{$image->getUrl(300,350)}}" class=" d-block w-100" alt="...">
-                        </div>
-
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                <div>
+                    @if($loop->first)
+                    <img src="{{$image->getUrl(300,350)}}" class=" d-block w-100" alt="...">
+                    @endif
                 </div>
                 @endforeach
-                <!-- ---------------------------------------------Carussel de fotos---------------------------------------------------------------------------------------------------------------------------------->
-                <!-- ---------------------------------------------Titulo, Precio, Descripcion---------------------------------------------------------------------------------------------------------------------------------->
                 <div class="card-body">
                     <h5 class="card-title fs-5"> {{$ad->title}}</h5>
                     <h6 class="precioCard card-subtitle mb-2 fw-bold fs-4">{{$ad->price}} €</h6>
@@ -54,5 +38,7 @@
                 </div>
             </div>
         </div>
+        <!-- ---------------------------------------------Carussel de fotos---------------------------------------------------------------------------------------------------------------------------------->
+        <!-- ---------------------------------------------Titulo, Precio, Descripcion---------------------------------------------------------------------------------------------------------------------------------->
         @endforeach
         <!-- ---------------------------------------------Card home---------------------------------------------------------------------------------------------------------------------------------->
