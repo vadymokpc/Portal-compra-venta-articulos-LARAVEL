@@ -17,9 +17,7 @@
 <div class="row mt-10">
     <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
         <h2>{{__('ui.segundoh1')}}</h2>
-        <p>Somos una plataforma líder en Europa en compraventa de articulos de segunda mano, salvamos miles de
-            productos, que de otra manera acabarian cogiendo polvo o en un vertedero. De esta manera ayudamos al
-            planeta reutilizando los productos que otros no utilizan.</p>
+        <p>{{__('ui.parrafoHome')}}</p>
     </div>
     <!-- -----------------------------------------Columna izquierda--------------------------------------------------  -->
     <!-- -----------------------------------------Columna derecha--------------------------------------------------  -->
