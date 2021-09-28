@@ -11447,6 +11447,12 @@ body .nuevoAnuncio .nuevoAnuncio {
 .cardHome {
   border-radius: 15px;
   background-color: wheat;
+  min-height: 600px;
+}
+
+.cardHome img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 /* ---------------------------------------------Card home ----------------------------------------------------*/

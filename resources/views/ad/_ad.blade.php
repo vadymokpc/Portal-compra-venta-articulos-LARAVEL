@@ -1,8 +1,8 @@
         <!-- ---------------------------------------------Card home---------------------------------------------------------------------------------------------------------------------------------->
         @foreach($ads as $ad)
 
-        <div class="col-12 col-md-3 d-flex justify-content-center ">
-            <div class=" card mb-5 cardHome" style="width: 18rem;">
+        <div class="col-12 col-md-3 ">
+            <div class=" card mb-5 cardHome" style="width: ;">
                 <!-- ---------------------------------------------Carussel de fotos---------------------------------------------------------------------------------------------------------------------------------->
                 @foreach ($ad->images as $image)
                 <div>
@@ -11,11 +11,11 @@
                     @endif
                 </div>
                 @endforeach
-                <div class=" card-body">
+                <div class=" card-body d-flex flex-column justify-content-around">
                     <h5 class="card-title fs-5"> {{$ad->title}}</h5>
                     <h6 class="precioCard card-subtitle mb-2 fw-bold fs-4">{{$ad->price}} €</h6>
                     <div class="textoCard">
-                        <p class="card-text"> {{$ad->body}}</p>
+                        <p class="card-text"> {{substr($ad->body, 0, 100)}} ...</p>
                     </div>
                     <h6 class="card-subtitle mb-2">
                         <!-- ---------------------------------------------Titulo, Precio, Descripcion---------------------------------------------------------------------------------------------------------------------------------->
