@@ -13,7 +13,6 @@
     </div>
 </div>
 <!-- -----------------------------------------Columna izquierda--------------------------------------------------  -->
-
 <div class="row mt-10">
     <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
         <h2>{{__('ui.segundoh1')}}</h2>
