@@ -33,8 +33,9 @@ class AddGooglevisionFieldsToAdImages extends Migration {
      * @return void
      */
     public function down() {
+        /* ------------------------------------7 Labels safe search de google---------------------------------------------------*/
         Schema::table('ad_images', function (Blueprint $table) {
-                /* ------------------------------------7 Labels safe search de google---------------------------------------------------*/
+
                 $table->dropColumn(['labels', 'adult', 'spoof', 'medical', 'violence', 'racy']);
             }
 

@@ -11275,11 +11275,13 @@ textarea.form-control-lg {
 }
 
 /* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
-/* ---------------------------------------------Mobile responsive ----------------------------   */
+/* ---------------------------------------------Banderitas Idiomas -----------------------------------------   */
 .lang-flags {
   display: flex;
 }
 
+/* ---------------------------------------------Banderitas Idiomas -----------------------------------------   */
+/* ---------------------------------------------Mobile responsive -----------------------------------------   */
 @media (max-width: 991px) {
   .navbar-nav .left-nav-elements,
 .right-nav-elements {
@@ -11294,8 +11296,8 @@ textarea.form-control-lg {
     margin-right: 15px;
   }
 }
-/* ---------------------------------------------Mobile responsive ----------------------------   */
-/* ---------------------------------------------Animaciones de botones ----------------------------   */
+/* ---------------------------------------------Mobile responsive -----------------------------------------   */
+/* ---------------------------------------------Animaciones de botones ------------------------------------   */
 .borderLeftRight {
   position: relative;
 }
@@ -11318,7 +11320,7 @@ textarea.form-control-lg {
   transform-origin: bottom left;
 }
 
-/* ---------------------------------------------Animaciones de botones ----------------------------   */
+/* ---------------------------------------------Animaciones de botones ------------------------------------   */
 body {
   /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
   font-family: "Kanit", sans-serif;
@@ -11334,8 +11336,9 @@ body {
   /* ----------------------------------Transicion lateral derecho de arriba abajo------------------------------------- */
   /* ----------------------------------Transicion lateral izquierdo de abajo arriba------------------------------------- */
   /* ---------------------------------------------Botones Login/Register ----------------------------------------------------*/
-  /* ---------------------------------------------Nuevo anuncio ----------------------------------------------------*/
-  /* ---------------------------------------------Nuevo anuncio ----------------------------------------------------*/
+  /* ---------------------------------------------Boton Nuevo anuncio ----------------------------------------------------*/
+  /* ---------------------------------------------Boton Nuevo anuncio ----------------------------------------------------*/
+  /* ---------------------------------------------Barra buscador y boton buscar ------------------------------------------*/
 }
 body button {
   position: relative;
@@ -11434,65 +11437,7 @@ body .nuevoAnuncio .nuevoAnuncio {
   position: absolute;
   display: block;
 }
-
-.altura {
-  height: 80vh;
-}
-
-.rowDetalles {
-  margin-top: 70px;
-}
-
-/* ---------------------------------------------Card home ----------------------------------------------------*/
-.cardHome {
-  border-radius: 15px;
-  background-color: wheat;
-  min-height: 600px;
-}
-
-.cardHome img {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-/* ---------------------------------------------Card home ----------------------------------------------------*/
-/* ---------------------------------------------Carousel Card home ----------------------------------------------------*/
-.carouselEstilo {
-  border-radius: 10px;
-}
-
-/* ---------------------------------------------Carousel Card home ----------------------------------------------------*/
-/* ---------------------------------------------Carousel imagen Card home ----------------------------------------------------*/
-.carouselImagen {
-  border-radius: 10px;
-}
-
-/* ---------------------------------------------Carousel imagen Card home ----------------------------------------------------*/
-.imagenColDerecha {
-  border-radius: 8px;
-}
-
-/* ---------------------------------------------Link Detalle----------------------------------------------------*/
-.linkDetalle {
-  padding: 7px 5px;
-  /* width: 90px; */
-  border-radius: 50px;
-  border-style: none;
-  color: black;
-  /*  overflow: hidden; */
-  background: #FFB900;
-}
-
-/* ---------------------------------------------Link Detalle----------------------------------------------------*/
-.nombreUser {
-  text-align: center;
-}
-
-.nombreCategoria {
-  text-align: center;
-}
-
-.rounded-pill {
+body .rounded-pill {
   position: relative;
   display: inline-block;
   padding: 7px 10px;
@@ -11500,8 +11445,7 @@ body .nuevoAnuncio .nuevoAnuncio {
   text-decoration: none;
   font-size: 13px;
 }
-
-.botonBuscar {
+body .botonBuscar {
   position: relative;
   display: inline-block;
   padding-right: 20px;
@@ -11511,6 +11455,22 @@ body .nuevoAnuncio .nuevoAnuncio {
   text-decoration: none;
   font-size: 13px;
   overflow: hidden;
+}
+body .buscador {
+  outline: none;
+}
+
+/* ---------------------------------------------Barra buscador y boton buscar ------------------------------------------*/
+/* ---------------------------------------------Card home ----------------------------------------------------*/
+.cardHome {
+  border-radius: 15px;
+  background-color: white;
+  min-height: 600px;
+}
+
+.cardHome img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .precioCard {
@@ -11523,8 +11483,58 @@ body .nuevoAnuncio .nuevoAnuncio {
   overflow: hidden;
 }
 
-.buscador {
-  outline: none;
+.nombreCategoria {
+  text-align: center;
+}
+
+.nombreUser {
+  text-align: center;
+}
+
+.linkDetalle {
+  border-style: none;
+  /*  overflow: hidden; */
+  background-color: black;
+  border-radius: 15px;
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+  margin: 20px 50px;
+  /*     Que no tenga la apariencia de link el "Leer mas" */
+  text-decoration: none;
+}
+
+.card:hover {
+  /* Al pasar el cursor por la card cambia de color el fondo y texto */
+  background-color: #3e3e3e;
+  color: white;
+  cursor: pointer;
+  /* Que aumente el tamaño */
+  transform: scale(1.03);
+  /*     Que tarde 1s en expandir la card */
+  transition: all 1s ease;
+}
+
+/* ---------------------------------------------Card home ----------------------------------------------------*/
+/* ---------------------------------------------Columna derecha ----------------------------------------------------*/
+.imagenColDerecha {
+  border-radius: 8px;
+}
+
+/* ---------------------------------------------Columna derecha ----------------------------------------------------*/
+/* ---------------------------------------------Vista detalle ----------------------------------------------------*/
+.carouselEstilo {
+  border-radius: 10px;
+}
+
+.rowDetalles {
+  margin-top: 70px;
+}
+
+/* ---------------------------------------------Vista detalle ----------------------------------------------------*/
+.altura {
+  height: 80vh;
 }
 
 /* Libreria externa de iconos*/

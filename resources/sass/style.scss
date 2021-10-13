@@ -5,10 +5,15 @@
 }
 
 /* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
-/* ---------------------------------------------Mobile responsive ----------------------------   */
+/* ---------------------------------------------Banderitas Idiomas -----------------------------------------   */
+
 .lang-flags {
     display: flex;
 }
+
+/* ---------------------------------------------Banderitas Idiomas -----------------------------------------   */
+
+/* ---------------------------------------------Mobile responsive -----------------------------------------   */
 
 @media (max-width: 991px) {
 
@@ -27,10 +32,9 @@
     }
 }
 
-/* ---------------------------------------------Mobile responsive ----------------------------   */
+/* ---------------------------------------------Mobile responsive -----------------------------------------   */
 
-/* ---------------------------------------------Animaciones de botones ----------------------------   */
-
+/* ---------------------------------------------Animaciones de botones ------------------------------------   */
 
 .borderLeftRight {
     position: relative;
@@ -55,7 +59,7 @@
     transform-origin: bottom left;
 }
 
-/* ---------------------------------------------Animaciones de botones ----------------------------   */
+/* ---------------------------------------------Animaciones de botones ------------------------------------   */
 
 body {
     /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
@@ -158,7 +162,7 @@ body {
     }
 
     /* ---------------------------------------------Botones Login/Register ----------------------------------------------------*/
-    /* ---------------------------------------------Nuevo anuncio ----------------------------------------------------*/
+    /* ---------------------------------------------Boton Nuevo anuncio ----------------------------------------------------*/
     .nuevoAnuncio {
         position: relative;
         display: inline-block;
@@ -175,10 +179,7 @@ body {
         transition: 0.2s;
     }
 
-    .nuevoAnuncio
-
-    /* :hover */
-        {
+    .nuevoAnuncio {
         color: #255784;
         background: #FFB900;
         /* Color de alumbrado final neon */
@@ -192,25 +193,44 @@ body {
     }
 
 
-    /* ---------------------------------------------Nuevo anuncio ----------------------------------------------------*/
+    /* ---------------------------------------------Boton Nuevo anuncio ----------------------------------------------------*/
+    /* ---------------------------------------------Barra buscador y boton buscar ------------------------------------------*/
+    .rounded-pill {
+        position: relative;
+        display: inline-block;
+        padding: 7px 10px;
+
+        border-style: none;
+        text-decoration: none;
+        font-size: 13px;
+
+    }
+
+    .botonBuscar {
+        position: relative;
+        display: inline-block;
+        padding-right: 20px;
+        border-radius: 10px;
+        border-style: none;
+        color: #0e0f0f;
+        text-decoration: none;
+        font-size: 13px;
+        overflow: hidden;
+    }
+
+    .buscador {
+        outline: none;
+    }
 
 }
 
-.altura {
-    height: 80vh;
-
-
-}
-
-.rowDetalles {
-    margin-top: 70px;
-}
+/* ---------------------------------------------Barra buscador y boton buscar ------------------------------------------*/
 
 /* ---------------------------------------------Card home ----------------------------------------------------*/
 
 .cardHome {
     border-radius: 15px;
-    background-color: wheat;
+    background-color: white;
     min-height: 600px;
 
 }
@@ -218,73 +238,6 @@ body {
 .cardHome img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-}
-
-/* ---------------------------------------------Card home ----------------------------------------------------*/
-/* ---------------------------------------------Carousel Card home ----------------------------------------------------*/
-.carouselEstilo {
-    border-radius: 10px;
-
-}
-
-/* ---------------------------------------------Carousel Card home ----------------------------------------------------*/
-/* ---------------------------------------------Carousel imagen Card home ----------------------------------------------------*/
-.carouselImagen {
-    border-radius: 10px;
-
-}
-
-/* ---------------------------------------------Carousel imagen Card home ----------------------------------------------------*/
-.imagenColDerecha {
-    border-radius: 8px;
-}
-
-/* ---------------------------------------------Link Detalle----------------------------------------------------*/
-
-.linkDetalle {
-
-
-    padding: 7px 5px;
-    /* width: 90px; */
-    border-radius: 50px;
-    border-style: none;
-    color: black;
-    /*  overflow: hidden; */
-    background: #FFB900;
-}
-
-
-
-/* ---------------------------------------------Link Detalle----------------------------------------------------*/
-.nombreUser {
-    text-align: center;
-}
-
-.nombreCategoria {
-    text-align: center;
-}
-
-.rounded-pill {
-    position: relative;
-    display: inline-block;
-    padding: 7px 10px;
-
-    border-style: none;
-    text-decoration: none;
-    font-size: 13px;
-
-}
-
-.botonBuscar {
-    position: relative;
-    display: inline-block;
-    padding-right: 20px;
-    border-radius: 10px;
-    border-style: none;
-    color: #0e0f0f;
-    text-decoration: none;
-    font-size: 13px;
-    overflow: hidden;
 }
 
 .precioCard {
@@ -298,6 +251,61 @@ body {
     overflow: hidden;
 }
 
-.buscador {
-    outline: none;
+.nombreCategoria {
+    text-align: center;
+}
+
+.nombreUser {
+    text-align: center;
+}
+
+.linkDetalle {
+
+    border-style: none;
+    /*  overflow: hidden; */
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    /*     Que no tenga la apariencia de link el "Leer mas" */
+    text-decoration: none;
+}
+
+.card:hover {
+    /* Al pasar el cursor por la card cambia de color el fondo y texto */
+    background-color: rgb(62, 62, 62);
+    color: white;
+    cursor: pointer;
+    /* Que aumente el tamaño */
+    transform: scale(1.03);
+    /*     Que tarde 1s en expandir la card */
+    transition: all 1s ease;
+}
+
+/* ---------------------------------------------Card home ----------------------------------------------------*/
+
+/* ---------------------------------------------Columna derecha ----------------------------------------------------*/
+
+.imagenColDerecha {
+    border-radius: 8px;
+}
+
+/* ---------------------------------------------Columna derecha ----------------------------------------------------*/
+/* ---------------------------------------------Vista detalle ----------------------------------------------------*/
+.carouselEstilo {
+    border-radius: 10px;
+}
+
+.rowDetalles {
+    margin-top: 70px;
+}
+
+/* ---------------------------------------------Vista detalle ----------------------------------------------------*/
+.altura {
+    height: 80vh;
+
+
 }
