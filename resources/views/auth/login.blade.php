@@ -34,11 +34,7 @@
 
                     <!--Button-Login-->
                     <div class="align-items-center my-2">
-                        <button href="#">
-                            <span class="botonLoginRegister"></span>
-                            <span class="botonLoginRegister"></span>
-                            <span class="botonLoginRegister"></span>
-                            <span class="botonLoginRegister"></span>
+                        <button class="boton" href="#">
                             Log-in
                         </button>
                     </div>
@@ -47,7 +43,7 @@
                 </form>
             </div>
             <div class="form-link d-flex flex-column justify-content-center align-items-center ">
-                <p class="text-white mb-0">¿No estás registrado? </p>
+                <p class="text-dark mb-0">¿No estás registrado? </p>
                 <a class="text-reset text-decoration-none mt-0 ms-2 " href="{{route('register')}}"><u> ¡Registrate
                         aqui!</u></a>
             </div>

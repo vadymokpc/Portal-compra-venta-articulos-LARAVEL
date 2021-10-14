@@ -20,8 +20,8 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown borderLeftRight">
-                        <a class="nav-link fs-5 text-decoration-none  dropdown-toggle" href="#" id="navbarDropdown"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="categorias nav-link fs-5 text-decoration-none  dropdown-toggle" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span>{{__('ui.categories')}}</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -41,7 +41,7 @@
                         <input class="rounded-pill buscador w-100 p-2 me-3 left-nav-elements" type="text" name="q"
                             placeholder="Buscar en todas las categorias" aria-label="Search">
 
-                        <button class="botonBuscar" type="submit">Buscar</button>
+                        <button class="boton" type="submit">Buscar</button>
                     </form>
                 </div>
                 <!-- ---------------------------------------Buscador----------------------------------------------------------------- -->
@@ -50,12 +50,12 @@
                     @guest
 
                     <li class="nav-item dropdown">
-                        <a class="borderMarcador nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-white"
+                        <a class="borderMarcador nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-dark"
                             href="{{route('login')}}"><span>{{__('ui.login')}}</span></a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="borderMarcador nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-white"
+                        <a class="borderMarcador nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-dark"
                             href="{{route('register')}}"><span>{{__('ui.register')}}</span></a>
                     </li>
 
@@ -67,18 +67,18 @@
                     </form>
                     <li class="nav-item dropdown">
                         <a id="logoutBtn"
-                            class=" nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-white"
+                            class=" nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-decoration-none text-dark"
                             href="#">{{__('ui.logout')}}</a>
                     </li>
                     <!-- ---------------------------------------nombre de usuario autentificado----------------------------------------------------------------- -->
-                    <li class="nav-item py-2 text-white">
+                    <li class="userAutentificado nav-item py-2 ">
                         {{ Auth::user()->name }}
                     </li>
                     <!-- ---------------------------------------nombre de usuario autentificado----------------------------------------------------------------- -->
                     <!-- ---------------------------------------Alert con el numero de anuncios por revisar----------------------------------------------------------------- -->
                     @if (Auth::user()->is_revisor)
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-white" href="{{ route('revisor.home') }}">
+                        <a class="nav-link text-dark" href="{{ route('revisor.home') }}">
                             Por revisar
                             <span class="badge rounded-pill bg-danger">
                                 {{\App\Models\Ad::ToBeRevisionedCount() }}

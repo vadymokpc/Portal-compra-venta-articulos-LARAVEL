@@ -61,7 +61,7 @@
             nav.classList.add('text-dark')
             nav.classList.remove('text-white')
             nav.classList.remove('bg-white')
-            nav.style.backgroundColor = '#f4c996'
+            nav.style.backgroundColor = '#eceff1'
             nav.classList.add('shadow')
         } else {
             nav.classList.add('bg-opacity-25')

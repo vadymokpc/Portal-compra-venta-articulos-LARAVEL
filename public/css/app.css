@@ -11269,12 +11269,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
-:root {
-  --color3: #FAFAFA;
-}
-
-/* ---------------------------------------------Color de Animaciones de botones ----------------------------   */
 /* ---------------------------------------------Banderitas Idiomas -----------------------------------------   */
 .lang-flags {
   display: flex;
@@ -11309,7 +11303,7 @@ textarea.form-control-lg {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--color3);
+  background-color: #3e3e3e;
   transform: scaleX(0);
   transition: transform 0.4s ease-in-out;
   transform-origin: bottom right;
@@ -11325,19 +11319,14 @@ body {
   /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
   font-family: "Kanit", sans-serif;
   /* ---------------------------------------------Google fonts "Extra-light 200" --------------------------------*/
-  /* background-color: #158ba8; */
-  background-color: #f4c996;
+  /* background-color: #f4c996 #158ba8; */
+  background-color: #eceff1;
   /* ---------------------------------------------Botones Login/Register ----------------------------------------------------*/
-  /* ----------------------------------------------------------------------- */
-  /* ----------------------------------Transicion superior de izquierda a derecha------------------------------------- */
-  /* ----------------------------------Transicion superior de izquierda a derecha------------------------------------- */
-  /* ----------------------------------Transicion inferior de derecha a izquierda------------------------------------- */
-  /* ----------------------------------Transicion inferior de derecha a izquierda------------------------------------- */
-  /* ----------------------------------Transicion lateral derecho de arriba abajo------------------------------------- */
-  /* ----------------------------------Transicion lateral izquierdo de abajo arriba------------------------------------- */
   /* ---------------------------------------------Botones Login/Register ----------------------------------------------------*/
+  /* ---------------------------------------------Boton Nuevo anuncio -------------------------------------------------------*/
   /* ---------------------------------------------Boton Nuevo anuncio ----------------------------------------------------*/
-  /* ---------------------------------------------Boton Nuevo anuncio ----------------------------------------------------*/
+  /* ---------------------------------------------Boton Categorias ----------------------------------------------------*/
+  /* ---------------------------------------------Boton Categorias ----------------------------------------------------*/
   /* ---------------------------------------------Barra buscador y boton buscar ------------------------------------------*/
 }
 body button {
@@ -11354,64 +11343,6 @@ body button {
   overflow: hidden;
   transition: 0.2s;
 }
-body button:hover {
-  color: #255784;
-  background: #2196f3;
-  /* Color de alumbrado final neon */
-  box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
-  transition-delay: 0.75s;
-}
-body button .botonLoginRegister {
-  position: absolute;
-  display: block;
-}
-body button .botonLoginRegister:nth-child(1) {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #2196f3);
-}
-body button:hover .botonLoginRegister:nth-child(1) {
-  left: 100%;
-  transition: 0.5s;
-}
-body button .botonLoginRegister:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(270deg, transparent, #FFB900);
-}
-body button:hover .botonLoginRegister:nth-child(3) {
-  right: 100%;
-  transition: 0.75s;
-  transition-delay: 0.2s;
-}
-body button .botonLoginRegister:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, #2196f3);
-}
-body button:hover .botonLoginRegister:nth-child(2) {
-  top: 100%;
-  transition: 0.75s;
-  transition-delay: 0.15s;
-}
-body button .botonLoginRegister:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #FFB900);
-}
-body button:hover .botonLoginRegister:nth-child(4) {
-  bottom: 100%;
-  transition: 0.75s;
-  transition-delay: 0.35s;
-}
 body .nuevoAnuncio {
   position: relative;
   display: inline-block;
@@ -11422,13 +11353,14 @@ body .nuevoAnuncio {
   /* Color del texto */
   /* #2196f3 */
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
   overflow: hidden;
   transition: 0.2s;
 }
 body .nuevoAnuncio {
   color: #255784;
-  background: #FFB900;
+  background: #60c9fb;
+  /* #FFB900 #13c1ac*/
   /* Color de alumbrado final neon */
   /* box-shadow: 0 0 10px #0D5EDB, 0 0 40px #0D5EDB, 0 0 80px #0D5EDB; */
   transition-delay: 1s;
@@ -11436,6 +11368,10 @@ body .nuevoAnuncio {
 body .nuevoAnuncio .nuevoAnuncio {
   position: absolute;
   display: block;
+}
+body .categorias {
+  font-size: 12px;
+  text-decoration: none;
 }
 body .rounded-pill {
   position: relative;
@@ -11445,22 +11381,34 @@ body .rounded-pill {
   text-decoration: none;
   font-size: 13px;
 }
-body .botonBuscar {
+body .boton:hover {
   position: relative;
   display: inline-block;
   padding-right: 20px;
   border-radius: 10px;
   border-style: none;
-  color: #0e0f0f;
+  color: white;
   text-decoration: none;
   font-size: 13px;
   overflow: hidden;
+  cursor: pointer;
+  /* Que aumente el tamaño */
+  transform: scale(1.03);
+  /*     Que tarde 1s en expandir la card */
+  transition: all 1s ease;
+  background-color: #60c9fb;
 }
 body .buscador {
   outline: none;
 }
 
 /* ---------------------------------------------Barra buscador y boton buscar ------------------------------------------*/
+/* ---------------------------------------------Nombre de usuario autentificado ------------------------------------------*/
+.userAutentificado {
+  color: #2196f3;
+}
+
+/* ---------------------------------------------Nombre de usuario autentificado ------------------------------------------*/
 /* ---------------------------------------------Card home ----------------------------------------------------*/
 .cardHome {
   border-radius: 15px;
@@ -11494,7 +11442,7 @@ body .buscador {
 .linkDetalle {
   border-style: none;
   /*  overflow: hidden; */
-  background-color: black;
+  background-color: #60c9fb;
   border-radius: 15px;
   color: white;
   padding: 15px 20px;

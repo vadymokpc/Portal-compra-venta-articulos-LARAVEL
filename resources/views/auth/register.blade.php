@@ -43,18 +43,14 @@
 
                     <!--Button-Register-->
                     <div class="align-items-center my-2">
-                        <button href="#">
-                            <span class="botonLoginRegister"></span>
-                            <span class="botonLoginRegister"></span>
-                            <span class="botonLoginRegister"></span>
-                            <span class="botonLoginRegister"></span>
+                        <button class="boton" href="#">
                             Register
                         </button>
                     </div>
                 </form>
             </div>
             <div class="d-flex flex-column justify-content-center align-items-center">
-                <p class="text-white mb-0">¿Ya tienes una cuenta?</p>
+                <p class="text-dark mb-0">¿Ya tienes una cuenta?</p>
                 <a class="text-reset text-decoration-none mt-0" href="{{route('login')}}"><u>Inicia sesión aquí</u></a>
             </div>
 

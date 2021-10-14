@@ -19,13 +19,13 @@
             <a href="https://google.es" class="me-4 text-reset">
                 <i class="fab fa-google"></i>
             </a>
-            <a href="https://instagram.com/alex___pal/" class="me-4 text-reset">
+            <a href="https://instagram.com" class="me-4 text-reset">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://linkedin.com" class="me-4 text-reset">
+            <a href="https://www.linkedin.com/in/vadym-ostapchuk-06b86721b/" class="me-4 text-reset">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com" class="me-4 text-reset">
+            <a href="https://github.com/vadymokpc" class="me-4 text-reset">
                 <i class="fab fa-github"></i>
             </a>
         </div>
@@ -81,9 +81,8 @@
                     <p><i class="fas fa-home me-3"></i> Barcelona</p>
                     <p>
                         <i class="fas fa-envelope me-3"></i>
-                        Vadlex@teamvadlex.com
+                        vadimokpc@gmail.com
                     </p>
-                    <p><i class="fas fa-phone me-3"></i> 600019008</p>
                     <p><i class="fas fa-phone me-3"></i> 697851024</p>
                 </div>
                 <!-- Grid column -->
